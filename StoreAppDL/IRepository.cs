@@ -1,4 +1,4 @@
-﻿using StoreAppModel;
+﻿using CustomerModel;
 
 namespace StoreAppDL
 {
@@ -11,7 +11,11 @@ namespace StoreAppDL
     /// </summary>
 public interface IRepository
 {
-    
-    
+    /// <summary>
+    /// Add a customer to the database
+    /// </summary>
+    /// <param name="c_customer"></param>
+    /// <returns></returns>
+    Customer AddCustomer(Customer c_customer);
 }
 }
