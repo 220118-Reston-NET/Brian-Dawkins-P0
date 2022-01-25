@@ -4,7 +4,7 @@ namespace OrderModel
     {
         public string LineItems { get; set; }
         public string Location { get; set ;}
-        public double Total {get; set; }
+        public double _total {get; set; }
         public double Total
         {
             get {return Total; }

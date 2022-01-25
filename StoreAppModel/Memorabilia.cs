@@ -2,7 +2,7 @@
 public class Products
 {
     public string Name { get; set; }
-    public double Price { get; set; }
+    public double _price { get; set; }
     public double Price
     {
         get {return Price; }
