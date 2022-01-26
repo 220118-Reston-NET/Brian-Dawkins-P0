@@ -26,7 +26,8 @@ namespace StoreBL
         //     //Not sure if this step is needed for adding customers
 
         //     //Validation Process
-            
+            return _repo.AddCustomer(c_customer);
         }
+        
     }
 }
