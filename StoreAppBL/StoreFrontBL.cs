@@ -29,5 +29,14 @@ namespace StoreBL
             return _repo.AddCustomer(c_customer);
         }
         
+        public List<Customer> SearchCustomer(string c_name)
+        {
+            List<Customer> listOfCustomers = _repo.GetAllCustomers();
+
+            //LINQ library
+            return listOfCustomers
+                    .Where(customer => customer.Name.Contains(c_name))//Where method is designed to filter a collection based on a condition
+                    .ToList(); //ToList method just converts into a list collection that our method needs to return
+        }
     }
 }

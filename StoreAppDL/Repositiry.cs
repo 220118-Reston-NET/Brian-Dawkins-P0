@@ -19,5 +19,14 @@ namespace StoreAppDL
 
             return c_customer;
         }  
+
+        public List<Customer> GetAllCustomers()
+        {
+            //Grab information from the JSON file and store it in a string
+            _jsonString = File.ReadAllText(_filepath + "Customer.json");
+
+            //Deserialize the jsonString into a List<Pokemon> object and return it
+            return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
+        }
     }
 }

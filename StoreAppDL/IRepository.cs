@@ -17,5 +17,11 @@ public interface IRepository
     /// <param name="c_customer"></param>
     /// <returns></returns>
     Customer AddCustomer(Customer c_customer);
+
+    /// <summary>
+    /// Will give all customers in the database
+    /// </summary>
+    /// <returns></returns>
+    List<Customer> GetAllCustomers();
 }
 }

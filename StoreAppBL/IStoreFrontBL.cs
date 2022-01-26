@@ -17,5 +17,12 @@ public interface IStoreFrontBL
     /// <param name="c_customer"></param>
     /// <returns></returns>
     Customer AddCustomer(Customer c_customer);
+
+    /// <summary>
+    /// Will give a list of customer objects that are related to the searched name
+    /// </summary>
+    /// <param name="c_name"></param>
+    /// <returns></returns>
+    List<Customer> SearchCustomer(string c_name);
     }
 }
