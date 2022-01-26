@@ -3,7 +3,7 @@ using StoreFrontModel;
 
 namespace StoreBL
 {
-    public class StoreBL : IStoreBL
+    public class StoreFrontBL : IStoreFrontBL
     {
         //Dependency Injection Pattern
         //- This is the main reason why we created interface first before the class
@@ -12,9 +12,9 @@ namespace StoreBL
         //the compiler helping us
         //===========================
         private IRepository _repo;
-        public StoreBL(IRepository p_repo)
+        public StoreFrontBL(IRepository p_repo)
         {
-            repo = p_repo;
+            _repo = p_repo;
         }
         //===========================
 

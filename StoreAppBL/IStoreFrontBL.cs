@@ -7,7 +7,7 @@ namespace StoreBL
 /// Business Layer is responsible for further validation or processing of data obtained from either the database or the user
 /// What kind of processing? That all depends on the type of functionality you will be doing
 /// </summary>
-public interface IStoreBL
+public interface IStoreFrontBL
 {
     /// <summary>
     /// Will add a customer to the database
