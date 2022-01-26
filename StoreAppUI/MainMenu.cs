@@ -11,8 +11,8 @@ namespace StoreUI
         {
             Console.WriteLine("Welcome to The Shop Memorabilia Store");
             Console.WriteLine("Who do we have the pleasure of helping today?");
-            Console.ReadLine();
-            Console.WriteLine(" What you like to do?");
+            Console.WriteLine("[5] Add Customer");
+            Console.WriteLine(" What would you like to do?");
             Console.WriteLine("[1] Check available inventory");
             Console.WriteLine("[2] Shop");
             Console.WriteLine("[3] See previous order");
@@ -38,6 +38,8 @@ namespace StoreUI
                     return "Previous Order";
                 case "4":
                     return "Find Location";
+                case "5":
+                    return "AddCustomer";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
