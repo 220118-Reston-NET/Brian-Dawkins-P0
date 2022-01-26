@@ -1,4 +1,4 @@
-﻿using StoreFrontModel;
+﻿using CustomerModel;
 
 namespace StoreBL
 {

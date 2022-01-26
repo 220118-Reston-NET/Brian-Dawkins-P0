@@ -1,5 +1,5 @@
 using StoreAppDL;
-using StoreFrontModel;
+using CustomerModel;
 
 namespace StoreBL
 {
@@ -22,10 +22,10 @@ namespace StoreBL
         {
             Random rand = new Random();
 
-            //Processing data to meet conditions
-            //Not sure if this step is needed for adding customers
+        //     //Processing data to meet conditions
+        //     //Not sure if this step is needed for adding customers
 
-            //Validation Process
+        //     //Validation Process
             
         }
     }
