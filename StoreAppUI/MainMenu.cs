@@ -21,7 +21,6 @@ namespace StoreUI
             Console.WriteLine("[4] Find Location");
             Console.WriteLine("[0] Exit");
         }
-        //Need to record and save customer name that user inputs before menu options
 
         public string UserChoice()
         {
