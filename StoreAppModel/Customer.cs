@@ -7,12 +7,14 @@ namespace CustomerModel
          public string Address 
         {
             get {return _address; }
-
+            set {_address = value; }
+            //Make sure to understand why set was needed here when you added it 
         }
         private string _phoneNumber { get; set; }
         public string PhoneNumber
         {
-            get { return _phoneNumber;}
+            get { return _phoneNumber; }
+            set { _phoneNumber = value; }
 
         }
         public string listOfOrders { get; set; }

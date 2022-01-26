@@ -20,7 +20,8 @@ namespace StoreUI
         public void Display()
         {
             Console.WriteLine("Enter Customer Information");
-            Console.WriteLine("[3] Name - " + _newCustomer.Name);
+            Console.WriteLine("[4] Name - " + _newCustomer.Name);
+            Console.WriteLine("[3] Phone Number - " + _newCustomer.PhoneNumber);
             Console.WriteLine("[2] Address - " + _newCustomer.Address);
             Console.WriteLine("[1] Save");
             Console.WriteLine("[0] Go Back");
@@ -34,6 +35,7 @@ namespace StoreUI
             {
                 case "0":
                     return "MainMenu";
+                
                 case "1":
                     //Exception handling to have better user experience 
                     try
@@ -47,11 +49,19 @@ namespace StoreUI
                         Console.ReadLine();
                     }
                     return "MainMenu";
+                
                 case "2":
                     Console.WriteLine("Please enter an address");
                     _newCustomer.Address = Console.ReadLine();
                     return "AddCustomer";
+                
                 case "3":
+                    Console.WriteLine("Please enter a phone number");
+                    _newCustomer.PhoneNumber= Console.ReadLine();
+                    return "AddCustomer";
+                    //May need some sort of parameter that phone number needs to fit in here
+                
+                case "4":
                     Console.WriteLine("Please enter a name");
                     _newCustomer.Name = Console.ReadLine();
                     return "AddCustomer";
