@@ -20,7 +20,7 @@ namespace StoreBL
 
         public Customer AddCustomer(Customer c_customer)
         {
-            Random rand = new Random();
+            //Random rand = new Random(); (Not sure if this makes sense for my project yet)
 
         //     //Processing data to meet conditions
         //     //Not sure if this step is needed for adding customers
