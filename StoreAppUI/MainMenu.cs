@@ -10,8 +10,10 @@ namespace StoreUI
         public void Display()
         {
             Console.WriteLine("Welcome to The Shop Memorabilia Store");
+            Console.WriteLine("              ");
             Console.WriteLine("Who do we have the pleasure of helping today?");
             Console.WriteLine("[5] Add Customer");
+            Console.WriteLine("              ");
             Console.WriteLine(" What would you like to do?");
             Console.WriteLine("[1] Check available inventory");
             Console.WriteLine("[2] Shop");
