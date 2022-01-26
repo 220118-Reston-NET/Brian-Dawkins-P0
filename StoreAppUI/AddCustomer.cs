@@ -41,6 +41,25 @@ namespace StoreUI
                         _customerBL.AddCustomer(_newCustomer);
                     } 
                     catch (System.Exception exc)
+                    {
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                    }
+                    return "MainMenu";
+                case "2":
+                    Console.WriteLine("Please enter an address");
+                    _newCustomer.Address = Console.ReadLine();
+                    return "AddCustomer";
+                case "3":
+                    Console.WriteLine("Please enter a name");
+                    _newCustomer.Name = Console.ReadLine();
+                    return "AddCustomer";
+                default:
+                    Console.WriteLine("Please input a valid response");
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "AddCustomer";
             }
         }
     }
