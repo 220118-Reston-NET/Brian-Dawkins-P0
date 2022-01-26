@@ -21,7 +21,7 @@ namespace StoreUI
             Console.WriteLine("[4] Find Location");
             Console.WriteLine("[0] Exit");
         }
-
+        //Need to add search customers option into display 
         public string UserChoice()
         {
             string userInput = Console.ReadLine();
