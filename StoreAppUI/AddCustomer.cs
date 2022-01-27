@@ -40,10 +40,13 @@ namespace StoreUI
                     //Exception handling to have better user experience 
                     try
                     {
+                        Log.Information("Adding customer \n" + _newCustomer);
                         _customerBL.AddCustomer(_newCustomer);
+                        Log.Information("Successful at adding customer!");
                     } 
                     catch (System.Exception exc)
                     {
+                        Log.Warning("Failed to add customer");
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Please press Enter to continue");
                         Console.ReadLine();

@@ -1,0 +1,9 @@
+2022-01-27 11:54:53.278 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 11:55:02.803 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 11:55:10.339 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 11:55:26.597 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 11:55:30.338 -05:00 [INF] Adding customer 
+CustomerModel.Customer
+2022-01-27 11:55:30.373 -05:00 [INF] Successful at adding customer!
+2022-01-27 11:55:30.373 -05:00 [INF] Displaying MainMenu to user
+2022-01-27 11:55:42.795 -05:00 [INF] Exiting application
