@@ -22,3 +22,18 @@ CustomerModel.Customer
 2022-01-27 12:37:57.784 -05:00 [INF] Displaying SearchCustomer Menu to user
 2022-01-27 12:39:04.489 -05:00 [INF] Displaying SearchCustomer Menu to user
 2022-01-27 12:39:12.805 -05:00 [INF] Displaying MainMenu to user
+2022-01-27 12:42:57.911 -05:00 [INF] Exiting application
+2022-01-27 12:43:06.946 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 12:43:13.278 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 12:43:17.918 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 12:43:24.318 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 12:43:32.782 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 12:43:34.750 -05:00 [INF] Adding customer 
+CustomerModel.Customer
+2022-01-27 12:43:34.778 -05:00 [INF] Successful at adding customer!
+2022-01-27 12:43:34.778 -05:00 [INF] Displaying MainMenu to user
+2022-01-27 12:43:37.014 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 12:44:06.168 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 12:44:10.645 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 12:44:14.485 -05:00 [INF] Displaying MainMenu to user
+2022-01-27 12:44:16.525 -05:00 [INF] Exiting application

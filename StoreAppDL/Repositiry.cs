@@ -6,7 +6,7 @@ namespace StoreAppDL
     public class Repository : IRepository
     {
         //Relative filepath is from the StoreAppUI since that is the starting point of our application
-        private string _filepath = "../StoreAppDL/Database";
+        private string _filepath = "../StoreAppDL/Database/";
         private string _jsonString;
         public Customer AddCustomer(Customer c_customer)
         {
