@@ -1,3 +1,4 @@
+using CustomerModel;
 using StoreBL;
 using StoreFrontModel;
 
