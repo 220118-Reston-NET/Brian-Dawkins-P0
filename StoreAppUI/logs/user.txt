@@ -20,3 +20,5 @@ CustomerModel.Customer
 2022-01-27 12:37:50.486 -05:00 [INF] Displaying MainMenu to user
 2022-01-27 12:37:52.536 -05:00 [INF] Displaying SearchCustomer Menu to user
 2022-01-27 12:37:57.784 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 12:39:04.489 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 12:39:12.805 -05:00 [INF] Displaying MainMenu to user
