@@ -13,6 +13,7 @@ namespace StoreUI
             Console.WriteLine("              ");
             Console.WriteLine("Who do we have the pleasure of helping today?");
             Console.WriteLine("[5] Add Customer");
+            Console.WriteLine("[6] Search Existing Customer");
             Console.WriteLine("              ");
             Console.WriteLine(" What would you like to do?");
             Console.WriteLine("[1] Check available inventory");
@@ -41,6 +42,8 @@ namespace StoreUI
                     return "Find Location";
                 case "5":
                     return "AddCustomer";
+                case "6":
+                    return "SearchCustomer";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
