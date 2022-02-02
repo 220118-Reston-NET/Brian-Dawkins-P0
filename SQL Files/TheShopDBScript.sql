@@ -84,11 +84,9 @@ create table customers_locations(
 )
 
 --Relationship between customers and orders 
---Many to Many 
-create table customers_orders(
-	CustomerId int foreign key references Customer(CustomerId),
-	OrderId int foreign key references Orders(OrderId) 
-)
+--One to Many customers can have more than one order
+alter table Orders 
+add CustomerId int foreign key references Customer(CustomerId)
 
 
 
