@@ -38,10 +38,41 @@ add customerId int foreign key references Customer(CustomerId)
 
 --Starts my tables that belong to my Order Model
 create table Orders(
-	OrderId int primary key,
-	location varchar(50),
-	total double(50,50)
+	OrderId int identity (1,1) primary key,
+	total int 
 );
+
+create table Location(
+	StoreId int identity (1,1) primary key,
+	LName varchar(50),
+	LAddress varchar(50),
+);
+
+create table LineItems(
+	ItemId int identity (1,1) primary key,
+	Product varchar(50)
+);
+
+--Ends my tables that belong to my Order Model 
+
+--Starts the relationship tables between Orders, Locations, and LineItems 
+--One to many (One store can have many Orders)
+alter table Orders 
+add StoreId int foreign key references Location(StoreId)
+
+--Many to Many (Many orders can have many Line items)
+create table Orders_LineItems(
+	OrderId int foreign key references Orders(OrderId),
+	ItemId int foreign key references LineItems(ItemId)
+)
+
+--Many Locations can have many Line Items
+create table Locations_LineItems(
+	StoreId int foreign key references Location(StoreId),
+	ItemId int foreign key references LineItems(ItemId)
+)
+
+
 
 
 
