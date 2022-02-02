@@ -76,6 +76,19 @@ create table Locations_LineItems(
 
 --Ends the relationship tables between Orders, Locations, and LineItems 
 
+--Relationship between customers and locations
+--Many to Many 
+create table customers_locations(
+	CustomerId int foreign key references Customer(CustomerId),
+	StoreId int foreign key references Location(StoreId)
+)
+
+--Relationship between customers and orders 
+--Many to Many 
+create table customers_orders(
+	CustomerId int foreign key references Customer(CustomerId),
+	OrderId int foreign key references Orders(OrderId) 
+)
 
 
 
