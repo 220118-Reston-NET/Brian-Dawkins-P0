@@ -72,6 +72,10 @@ create table Locations_LineItems(
 	ItemId int foreign key references LineItems(ItemId)
 )
 
+--Where our insert statements go for values 
+
+--Ends the relationship tables between Orders, Locations, and LineItems 
+
 
 
 
