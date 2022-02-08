@@ -21,6 +21,11 @@ namespace CustomerModel
         }
         public string listOfOrders { get; set; }
 
+        public override string ToString()
+        {
+            return $"Id: {CustomerId}\nName: {Name}\nAddress: {Address}\nPhoneNumber: {PhoneNumber}\nOrders: {listOfOrders}";
+        }
+
        
         
     }
