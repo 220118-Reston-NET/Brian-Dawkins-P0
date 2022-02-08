@@ -2,6 +2,8 @@ namespace OrderModel
 {
     public class Orders 
     {
+        //Acts as our primary key
+        public int OrderId { get; set; }
         public string LineItems { get; set; }
         public string Location { get; set ;}
         public double _total {get; set; }

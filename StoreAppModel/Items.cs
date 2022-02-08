@@ -2,6 +2,8 @@ namespace LineItemModel
 {
     public class Items
     {
+        //Acts as our primary key 
+        public int ItemId { get; set;}
         public string Product { get; set; }
         public int _quantity { get; set; }
         public int Quantity

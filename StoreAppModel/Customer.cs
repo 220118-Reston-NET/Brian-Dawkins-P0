@@ -2,6 +2,8 @@ namespace CustomerModel
 {
     public class Customer 
     { 
+        //Acts as our primary key
+        public int CustomerId { get; set;}
         public string Name { get; set;}
         private string _address { get; set; }
          public string Address 
