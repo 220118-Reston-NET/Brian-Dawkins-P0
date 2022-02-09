@@ -1,5 +1,6 @@
 using StoreAppDL;
 using CustomerModel;
+using OrderModel;
 
 namespace StoreBL
 {
@@ -28,7 +29,17 @@ namespace StoreBL
         //     //Validation Process
             return _repo.AddCustomer(c_customer);
         }
-        
+
+        public List<Customer> GetAllCustomers()
+        {
+            return _repo.GetAllCustomers();
+        }
+
+        public List<Orders> GetOrdersByCustomerId(int c_customerId)
+        {
+            return _repo.GetOrdersByCustomerId(c_customerId);
+        }
+
         public List<Customer> SearchCustomer(string c_name)
         {
             List<Customer> listOfCustomers = _repo.GetAllCustomers();

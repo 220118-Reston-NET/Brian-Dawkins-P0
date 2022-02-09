@@ -20,6 +20,7 @@ namespace StoreUI
             Console.WriteLine("[2] Shop");
             Console.WriteLine("[3] See previous order");
             Console.WriteLine("[4] Find Location");
+            Console.WriteLine("[7] Get order from customer");
             Console.WriteLine("[0] Exit");
         }
         //Need to add search customers option into display 
@@ -44,6 +45,8 @@ namespace StoreUI
                     return "AddCustomer";
                 case "6":
                     return "SearchCustomer";
+                case "7":
+                    return "GetCustomerOrder";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

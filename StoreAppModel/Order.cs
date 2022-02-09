@@ -22,5 +22,7 @@ namespace OrderModel
                 }
             }
         }
+
+        public int CustomerId { get; set; }
     }
 }

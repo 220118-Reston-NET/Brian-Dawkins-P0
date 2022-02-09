@@ -1,4 +1,5 @@
 ﻿using CustomerModel;
+using OrderModel;
 
 namespace StoreBL
 {
@@ -24,5 +25,13 @@ public interface IStoreFrontBL
     /// <param name="c_name"></param>
     /// <returns></returns>
     List<Customer> SearchCustomer(string c_name);
+
+    /// <summary>
+    /// Will give a list of customers from the database
+    /// </summary>
+    /// <returns>list collection with customer objects</returns>
+    List<Customer> GetAllCustomers();
+
+    List<Orders> GetOrdersByCustomerId(int c_customerId);
     }
 }

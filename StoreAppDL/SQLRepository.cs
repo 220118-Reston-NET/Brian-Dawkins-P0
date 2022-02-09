@@ -1,5 +1,6 @@
 using System.Data.SqlClient;
 using CustomerModel;
+using OrderModel;
 
 namespace StoreAppDL
 {
@@ -67,12 +68,42 @@ namespace StoreAppDL
                     listOfCustomers.Add(new Customer(){
                         CustomerId = reader.GetInt32(0), //It will get the column customerId since that is the very first column of our select statement
                         Name = reader.GetString(1), //It will get the name of the Name column since it is the second column of our select statement
-                        Address = reader.GetString(2) //It will get the address of the Address column since it is the third column of our select statement
+                        Address = reader.GetString(2), //It will get the address of the Address column since it is the third column of our select statement
+                        //Orders = GetOrdersByCustomerId(reader.GetInt32(1)) (Maybe)
                     });
                 }
             }
 
             return listOfCustomers;
+        }
+
+        public List<Orders> GetOrdersByCustomerId(int c_customerId)
+        {
+            List<Orders> listOfOrders = new List<Orders>();
+
+            string sqlQuery = @"select c.CustomerId, o.OrderId from Orders o  
+                                inner join customer c on o.CustomerId  = c.CustomerId
+                                where o.CustomerId = @CustomerId";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@CustomerId", c_customerId);
+
+                SqlDataReader reader = command.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    listOfOrders.Add(new Orders(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        OrderId = reader.GetInt32(1),
+                        CustomerId = reader.GetInt32(0)
+                    });
+                }
+            }
+            return listOfOrders;
         }
     }
 }

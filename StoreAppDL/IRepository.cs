@@ -1,4 +1,5 @@
 ﻿using CustomerModel;
+using OrderModel;
 
 namespace StoreAppDL
 {
@@ -23,5 +24,12 @@ public interface IRepository
     /// </summary>
     /// <returns></returns>
     List<Customer> GetAllCustomers();
+
+    /// <summary>
+    /// Will give a list of orders from a customer
+    /// </summary>
+    /// <param name="c_customerId">The Id of the customer it will search</param>
+    /// <returns>list collection that holds order objects</returns>
+    List<Orders> GetOrdersByCustomerId(int c_customerId);
 }
 }

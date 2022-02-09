@@ -1,5 +1,6 @@
 using System.Text.Json;
 using CustomerModel;
+using OrderModel;
 
 namespace StoreAppDL
 {
@@ -27,6 +28,11 @@ namespace StoreAppDL
 
             //Deserialize the jsonString into a List<Pokemon> object and return it
             return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
+        }
+
+        public List<Orders> GetOrdersByCustomerId(int c_customerId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

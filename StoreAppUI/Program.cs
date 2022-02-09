@@ -32,6 +32,9 @@ while(repeat)
 
     switch (ans)
     {
+        case "GetCustomerOrder":
+            menu = new GetCustomerOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
         case "SearchCustomer":
         Log.Information("Displaying SearchCustomer Menu to user");
             menu = new SearchCustomer(new StoreFrontBL(new SQLRepository(_connectionString)));
