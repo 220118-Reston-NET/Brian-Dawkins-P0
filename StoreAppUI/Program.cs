@@ -4,6 +4,7 @@ global using Serilog;
 using StoreBL;
 using StoreAppDL;
 using StoreUI;
+using Microsoft.Extensions.Configuration;
 
 //Console.WriteLine("Hello, World!");
 
@@ -11,6 +12,14 @@ using StoreUI;
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("./logs/user.txt") //We configure our logger to save in this file 
     .CreateLogger();
+
+//Reading and obtaining connectionString from appsettings.json
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+string _connectionString = configuration.GetConnectionString("Reference2DB");
 
 bool repeat = true;
 IMenu menu = new MainMenu();
@@ -25,11 +34,11 @@ while(repeat)
     {
         case "SearchCustomer":
         Log.Information("Displaying SearchCustomer Menu to user");
-            menu = new SearchCustomer(new StoreFrontBL(new SQLRepository()));
+            menu = new SearchCustomer(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
         case "AddCustomer":
         Log.Information("Displaying AddCustomer Menu to user");
-            menu = new AddCustomer(new StoreFrontBL(new SQLRepository()));
+            menu = new AddCustomer(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
         case "MainMenu":
             Log.Information("Displaying MainMenu to user");

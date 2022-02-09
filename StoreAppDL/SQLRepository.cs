@@ -5,6 +5,13 @@ namespace StoreAppDL
 {
     public class SQLRepository : IRepository
     {
+        //SQLRepository now requires you to provide a connectionString to an existing database to create an object out of it
+        //It will also allow SQLRepository to dynamically point to different databases as long as you have the connection string for it 
+        private readonly string _connectionStrings;
+        public SQLRepository (string p_connectionStrings)
+        {
+            _connectionStrings = p_connectionStrings;
+        }
         public Customer AddCustomer(Customer c_customer)
         {
             //@before the string will ignore the special characters like \n
@@ -16,7 +23,7 @@ namespace StoreAppDL
             //using block is different from our normal using statement
             //It is used to automatically close any resource you stated inside of the parenthesis
             //If an exception occurs it will still automatically close any resources
-            using (SqlConnection con = new SqlConnection("PUT YOUR CONNECTION STRING HERE"))
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 //Opens the connection to the database
                 con.Open();
@@ -40,7 +47,7 @@ namespace StoreAppDL
 
             string sqlQuery = @"select * from customer";
 
-            using (SqlConnection con = new SqlConnection("PUT YOUR CONNECTION STRING HERE"))
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 //Opens connection to the database
                 con.Open();
