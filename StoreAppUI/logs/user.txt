@@ -73,3 +73,4 @@ CustomerModel.Customer
 2022-02-09 15:33:58.774 -05:00 [INF] Displaying MainMenu to user
 2022-02-09 15:34:00.261 -05:00 [INF] Exiting application
 2022-02-09 15:34:18.813 -05:00 [INF] Displaying MainMenu to user
+2022-02-09 16:12:19.222 -05:00 [INF] Exiting application
