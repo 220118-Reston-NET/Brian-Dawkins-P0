@@ -78,6 +78,11 @@ namespace StoreAppDL
             return listOfCustomers;
         }
 
+        public List<StoreFront> GetAllStores()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Orders> GetOrdersByCustomerId(int c_customerId)
         {
             List<Orders> listOfOrders = new List<Orders>();
@@ -111,7 +116,7 @@ namespace StoreAppDL
         {
             List<StoreFront> listOfStores = new List<StoreFront>();
             
-            string sqlQuery = @"select * from Location";
+            string sqlQuery = @"select * from Inventory";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -119,7 +124,21 @@ namespace StoreAppDL
                 con.Open();
                 
                 //Create command object 
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@StoreId", c_storeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfStores.Add(new StoreFront(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        StoreId = reader.GetInt32(1),
+                        ProductId = reader.GetInt32(0)
+                    });
             }
         }
+        return listOfStores;
+    }
     }
 }

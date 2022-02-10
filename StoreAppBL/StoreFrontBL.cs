@@ -2,6 +2,7 @@ using StoreAppDL;
 using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
+using System.Linq;
 
 namespace StoreBL
 {
@@ -50,6 +51,24 @@ namespace StoreBL
                     .Where(customer => customer.Name.Contains(c_name))//Where method is designed to filter a collection based on a condition
                     .ToList(); //ToList method just converts into a list collection that our method needs to return
         }
+        List<StoreFront> GetAllStores()
+        {
+            return _repo.GetAllStores();
+        }
 
+        public List<StoreFront> ViewInventory(int c_storeId)
+        {
+            List<StoreFront> listOfStores = _repo.GetAllStores();
+
+            //LINQ library
+            return listOfStores
+                    .Where(store => store.StoreId.Equals(c_storeId))//Where method is designed to filter a collection based on a condition
+                    .ToList(); //ToList method just converts into a list collection that our method needs to return
+        }
+
+        public List<StoreFront>? ViewInventory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CustomerModel;
 using OrderModel;
+using StoreFrontModel;
 
 namespace StoreBL
 {
@@ -33,5 +34,8 @@ public interface IStoreFrontBL
     List<Customer> GetAllCustomers();
 
     List<Orders> GetOrdersByCustomerId(int c_customerId);
+
+    public List<StoreFront> ViewInventory(int c_storeId);
+        List<StoreFront>? ViewInventory();
     }
 }

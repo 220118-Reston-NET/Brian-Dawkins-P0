@@ -34,7 +34,7 @@ namespace StoreUI
                 case "0":
                     return "Exit";
                 case "1":
-                    return "Check Inventory";
+                    return "ViewInventory";
                 case "2":
                     return "Shop";
                 case "3":

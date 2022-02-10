@@ -1,6 +1,7 @@
 using System.Text.Json;
 using CustomerModel;
 using OrderModel;
+using StoreFrontModel;
 
 namespace StoreAppDL
 {
@@ -30,7 +31,17 @@ namespace StoreAppDL
             return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
         }
 
+        public List<StoreFront> GetAllStores()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Orders> GetOrdersByCustomerId(int c_customerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<StoreFront> ViewInventory(int c_storeId)
         {
             throw new NotImplementedException();
         }
