@@ -74,3 +74,16 @@ CustomerModel.Customer
 2022-02-09 15:34:00.261 -05:00 [INF] Exiting application
 2022-02-09 15:34:18.813 -05:00 [INF] Displaying MainMenu to user
 2022-02-09 16:12:19.222 -05:00 [INF] Exiting application
+2022-02-10 12:44:23.024 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-10 12:44:30.911 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-10 12:44:40.590 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-10 12:45:00.333 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-10 12:45:01.469 -05:00 [INF] Adding customer 
+Id: 0
+Name: Eren Jaeger
+Address: Wall Maria
+PhoneNumber: 678-9876
+
+2022-02-10 12:45:02.640 -05:00 [INF] Successful at adding customer!
+2022-02-10 12:45:02.640 -05:00 [INF] Displaying MainMenu to user
+2022-02-10 12:45:06.708 -05:00 [INF] Exiting application
