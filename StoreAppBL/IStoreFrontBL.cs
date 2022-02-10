@@ -36,6 +36,6 @@ public interface IStoreFrontBL
     List<Orders> GetOrdersByCustomerId(int c_customerId);
 
     public List<StoreFront> ViewInventory(int c_storeId);
-        List<StoreFront>? ViewInventory();
+        List<StoreFront> ViewInventory();
     }
 }

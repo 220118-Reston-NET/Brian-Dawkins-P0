@@ -66,7 +66,7 @@ namespace StoreBL
                     .ToList(); //ToList method just converts into a list collection that our method needs to return
         }
 
-        public List<StoreFront>? ViewInventory()
+        public List<StoreFront> ViewInventory()
         {
             throw new NotImplementedException();
         }

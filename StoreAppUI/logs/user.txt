@@ -87,3 +87,7 @@ PhoneNumber: 678-9876
 2022-02-10 12:45:02.640 -05:00 [INF] Successful at adding customer!
 2022-02-10 12:45:02.640 -05:00 [INF] Displaying MainMenu to user
 2022-02-10 12:45:06.708 -05:00 [INF] Exiting application
+2022-02-10 16:33:23.987 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-10 16:33:28.519 -05:00 [INF] Displaying MainMenu to user
+2022-02-10 16:33:29.855 -05:00 [INF] Exiting application
+2022-02-10 16:38:26.402 -05:00 [INF] Exiting application
