@@ -1,3 +1,5 @@
+using OrderModel;
+
 namespace CustomerModel
 {
     public class Customer 
@@ -19,11 +21,17 @@ namespace CustomerModel
             set { _phoneNumber = value; }
 
         }
-        public string listOfOrders { get; set; }
+        //public string listOfOrders { get; set; }
+        private List<Orders> _orders;
+        public List<Orders> Orders
+        {
+            get {return _orders; }
+            set { _orders = value; }
+        }
 
         public override string ToString()
         {
-            return $"Id: {CustomerId}\nName: {Name}\nAddress: {Address}\nPhoneNumber: {PhoneNumber}\nOrders: {listOfOrders}";
+            return $"Id: {CustomerId}\nName: {Name}\nAddress: {Address}\nPhoneNumber: {PhoneNumber}\n";
         }
 
        

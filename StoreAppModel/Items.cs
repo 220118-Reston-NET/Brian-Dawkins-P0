@@ -11,7 +11,7 @@ namespace LineItemModel
             get {return Quantity;}
             set
             {
-                if (value > 0)
+                if (value >= 0)
                 {
                     Quantity = value; 
                 }
@@ -21,5 +21,11 @@ namespace LineItemModel
                 }
             }
         }
-    }
-}
+        public override string ToString()
+        {
+            return $"===================\nID: {ItemId}\nQuantity: {Quantity}\n";
+        }
+
+            }
+        }
+    
