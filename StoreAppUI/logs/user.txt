@@ -91,3 +91,5 @@ PhoneNumber: 678-9876
 2022-02-10 16:33:28.519 -05:00 [INF] Displaying MainMenu to user
 2022-02-10 16:33:29.855 -05:00 [INF] Exiting application
 2022-02-10 16:38:26.402 -05:00 [INF] Exiting application
+2022-02-10 17:07:30.022 -05:00 [INF] Displaying MainMenu to user
+2022-02-10 17:07:31.618 -05:00 [INF] Exiting application

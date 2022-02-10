@@ -55,18 +55,25 @@ namespace StoreBL
         {
             return _repo.GetAllStores();
         }
+        // public List<StoreFront> ViewInventory(int c_storeId)
+        // {
+        //     return _repo.ViewInventory(c_storeId);
+        // }
+        // public List<StoreFront> ViewInventory(int c_storeId)
+        // {
+        //      List<StoreFront> listOfStores = _repo.GetAllStores();
 
-        public List<StoreFront> ViewInventory(int c_storeId)
+        //     //LINQ library
+        //     return listOfStores
+        //             .Where(store => store.StoreId.Equals(c_storeId))//Where method is designed to filter a collection based on a condition
+        //             .ToList(); //ToList method just converts into a list collection that our method needs to return
+        // }
+        public List<StoreFront> ViewInventory()
         {
-            List<StoreFront> listOfStores = _repo.GetAllStores();
-
-            //LINQ library
-            return listOfStores
-                    .Where(store => store.StoreId.Equals(c_storeId))//Where method is designed to filter a collection based on a condition
-                    .ToList(); //ToList method just converts into a list collection that our method needs to return
+            throw new NotImplementedException();
         }
 
-        public List<StoreFront> ViewInventory()
+        public List<StoreFront> ViewInventory(int c_storeId)
         {
             throw new NotImplementedException();
         }

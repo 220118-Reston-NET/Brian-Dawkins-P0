@@ -6,12 +6,12 @@ namespace StoreUI
 {
     public class ViewInventory : IMenu
     {
-        private List<StoreFront> _listOfStore;
+        private List<StoreFront> _listOfStore = new List<StoreFront>();
         private IStoreFrontBL _storeBL;
         public ViewInventory(IStoreFrontBL c_storeBL)
         {
              _storeBL = c_storeBL;
-             _listOfStore = _storeBL.ViewInventory();
+             //_listOfStore = _storeBL.ViewInventory();
         }
 
         public void Display()
