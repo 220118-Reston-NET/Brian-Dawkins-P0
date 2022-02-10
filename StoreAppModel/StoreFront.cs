@@ -3,7 +3,7 @@ using ProductModel;
 
 namespace StoreFrontModel
 {
-    public class StoreFrontModel
+    public class StoreFront
     {
         public int StoreId { get; set; }
         public string Name { get; set; }
@@ -36,7 +36,7 @@ namespace StoreFrontModel
             }
         }
 
-        public StoreFrontModel()
+        public StoreFront()
         {
             Name = "";
             Address = "";

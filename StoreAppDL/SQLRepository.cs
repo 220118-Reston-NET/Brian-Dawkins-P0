@@ -1,6 +1,7 @@
 using System.Data.SqlClient;
 using CustomerModel;
 using OrderModel;
+using StoreFrontModel;
 
 namespace StoreAppDL
 {
@@ -104,6 +105,21 @@ namespace StoreAppDL
                 }
             }
             return listOfOrders;
+        }
+
+        public List<StoreFront> ViewInventory(int c_storeId)
+        {
+            List<StoreFront> listOfStores = new List<StoreFront>();
+            
+            string sqlQuery = @"select * from Location";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                
+                //Create command object 
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CustomerModel;
 using OrderModel;
+using StoreFrontModel;
 
 namespace StoreAppDL
 {
@@ -31,5 +32,7 @@ public interface IRepository
     /// <param name="c_customerId">The Id of the customer it will search</param>
     /// <returns>list collection that holds order objects</returns>
     List<Orders> GetOrdersByCustomerId(int c_customerId);
+
+    List<StoreFront> ViewInventory(int c_storeId);
 }
 }
