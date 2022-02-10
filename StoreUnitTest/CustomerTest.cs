@@ -1,5 +1,6 @@
 using Xunit;
 using CustomerModel;
+using LineItemModel;
 
 namespace StoreUnitTest;
 
@@ -25,7 +26,7 @@ public class CustomerTest
         Assert.Equal(validName, cus.Name); //checks if the property does indeed hold the same value as what we set it as
 
     }
-    
+
     /// <summary>
     /// Checks the validation for Name property for valid data
     /// </summary>
@@ -44,4 +45,43 @@ public class CustomerTest
         Assert.NotNull(addr.Address); //checks that the property is not null meaning we did set data in this property
         Assert.Equal(validAddress, addr.Address);//checks if the property does indeed hold the same value as what we set it as
         }
+
+        /// <summary>
+        /// Checks the validation for Name property for valid data
+        /// </summary>
+        /// [Fact] is a data annotation in C# and all it means is it will tell the compiler that this specific method is a unit test
+        [Fact]
+        public void PNShouldSetValidData()
+        {
+            //Arrange
+            Customer phone = new Customer();
+            string validnumber = "333-222-5555";
+            
+            //Act
+            phone.PhoneNumber = validnumber;
+        
+            //Assert
+            Assert.NotNull(phone.PhoneNumber);//checks that the property is not null meaning we did set data in this property
+            Assert.Equal(validnumber, phone.PhoneNumber);//checks if the property does indeed hold the same value as what we set it as
+        }
+        /// <summary>
+        /// Checks the validation for Name property for valid data
+        /// </summary>
+        /// [Fact] is a data annotation in C# and all it means is it will tell the compiler that this specific method is a unit test
+        [Fact]
+        public void OrdersShouldSetValidData()
+        {
+            //Arrange
+            Customer ord = new Customer();
+            string validOrder = "5 Jerseys, two baseballs";
+        
+            //Act
+            ord.listOfOrders = validOrder;
+        
+            //Assert
+            Assert.NotNull(ord.listOfOrders);//checks that the property is not null meaning we did set data in this property
+            Assert.Equal(validOrder, ord.listOfOrders);//checks if the property does indeed hold the same value as what we set it as
+        }
+        
     }
+   

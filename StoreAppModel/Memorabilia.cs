@@ -1,4 +1,4 @@
-﻿namespace MemorabiliaModel;
+﻿namespace ProductModel;
 public class Products
 {
     public string Name { get; set; }
