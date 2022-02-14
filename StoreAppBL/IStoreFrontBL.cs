@@ -32,10 +32,26 @@ public interface IStoreFrontBL
     /// </summary>
     /// <returns>list collection with customer objects</returns>
     List<Customer> GetAllCustomers();
-
+    /// <summary>
+    /// Will give the order associated with a specific customer Id
+    /// </summary>
+    /// <param name="c_customerId"></param>
+    /// <returns>list collection with customer orders</returns>
     List<Orders> GetOrdersByCustomerId(int c_customerId);
-
+    /// <summary>
+    /// Will give the order associated with a specific store Id
+    /// </summary>
+    /// <param name="c_storeId"></param>
+    /// <returns>list collection associated with store orders</returns>
+    List<StoreFront> GetAllStores(int c_storeId);
+    List<Orders> GetOrdersByStoreId(int c_storeId);
+    /// <summary>
+    /// Will give the inventory associated with all of the store fronts 
+    /// </summary>
+    /// <param name="c_storeId"></param>
+    /// <returns>list collection of inventory at each store location</returns>
     public List<StoreFront> ViewInventory(int c_storeId);
         List<StoreFront> ViewInventory();
+        List<StoreFront>? GetAllStores();
     }
 }
