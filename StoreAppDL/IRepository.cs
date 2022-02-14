@@ -33,7 +33,8 @@ public interface IRepository
     /// <returns>list collection that holds order objects</returns>
     List<Orders> GetOrdersByCustomerId(int c_customerId);
 
-    List<StoreFront> GetAllStores();
+    List<StoreFront> GetAllStores(int c_storeId);
     List<StoreFront> ViewInventory(int c_storeId);
-}
+        //List<StoreFront> GetAllStores();
+    }
 }

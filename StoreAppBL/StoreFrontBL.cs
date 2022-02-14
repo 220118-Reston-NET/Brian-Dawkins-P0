@@ -51,9 +51,9 @@ namespace StoreBL
                     .Where(customer => customer.Name.Contains(c_name))//Where method is designed to filter a collection based on a condition
                     .ToList(); //ToList method just converts into a list collection that our method needs to return
         }
-        List<StoreFront> GetAllStores()
+        List<StoreFront> GetAllStores(int c_storeId)
         {
-            return _repo.GetAllStores();
+            throw new NotImplementedException();
         }
         // public List<StoreFront> ViewInventory(int c_storeId)
         // {
@@ -83,12 +83,12 @@ namespace StoreBL
             throw new NotImplementedException();
         }
 
-        public List<StoreFront> GetAllStores(int c_storeId)
+        List<StoreFront> IStoreFrontBL.GetAllStores(int c_storeId)
         {
-            return _repo.GetAllStores();
+            throw new NotImplementedException();
         }
 
-        List<StoreFront>? IStoreFrontBL.GetAllStores()
+        public List<StoreFront> GetAllStores()
         {
             throw new NotImplementedException();
         }

@@ -52,6 +52,6 @@ public interface IStoreFrontBL
     /// <returns>list collection of inventory at each store location</returns>
     public List<StoreFront> ViewInventory(int c_storeId);
         List<StoreFront> ViewInventory();
-        List<StoreFront>? GetAllStores();
+        List<StoreFront> GetAllStores();
     }
 }

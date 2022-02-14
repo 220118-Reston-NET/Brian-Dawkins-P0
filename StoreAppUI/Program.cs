@@ -32,6 +32,9 @@ while(repeat)
 
     switch (ans)
     {
+        case "GetStoreOrder":
+            menu = new GetStoreOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
         case "ViewInventory":
             menu = new ViewInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;

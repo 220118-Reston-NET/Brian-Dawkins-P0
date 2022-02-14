@@ -77,10 +77,34 @@ namespace StoreAppDL
 
             return listOfCustomers;
         }
-
-        public List<StoreFront> GetAllStores()
+        public List<StoreFront> GetAllStores(int c_storeId)
         {
-            throw new NotImplementedException();
+            List<StoreFront> listofStores = new List<StoreFront>();
+
+            string sqlQuery = @"select o.StoreId, o.total from Orders o 
+                                inner join Location l on o.StoreId = L.StoreId 
+                                Where o.StoreId = @StoreId";
+
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@StoreId", c_storeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+                
+                 while (reader.Read())
+                {
+                    listofStores.Add(new StoreFront(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        OrderId = reader.GetInt32(1),
+                        StoreId = reader.GetInt32(0)
+                    });
+                }
+            }
+            return listofStores;
         }
 
         public List<Orders> GetOrdersByCustomerId(int c_customerId)

@@ -5,6 +5,7 @@ namespace StoreFrontModel
 {
     public class StoreFront
     {
+        public int OrderId { get; set; }
         public int StoreId { get; set; }
         public int ProductId { get; set; }
         public string Name { get; set; }

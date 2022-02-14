@@ -31,7 +31,7 @@ namespace StoreAppDL
             return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
         }
 
-        public List<StoreFront> GetAllStores()
+        public List<StoreFront> GetAllStores(int c_storeId)
         {
             throw new NotImplementedException();
         }
