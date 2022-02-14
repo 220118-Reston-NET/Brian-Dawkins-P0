@@ -21,8 +21,8 @@ namespace StoreUI
         {
             Console.WriteLine("Replenish Inventory Menu");
             Console.WriteLine("Would you like to replinish a stores Inventory?");
-            Console.WriteLine("[2] Yes");
-            Console.WriteLine("[1] Go Back");
+            Console.WriteLine("[1] Yes");
+            Console.WriteLine("[0] Go Back");
         }
         public string UserChoice()
         {
@@ -30,7 +30,7 @@ namespace StoreUI
 
             switch (userInput)
             {
-                case "2":
+                case "1":
                     Console.WriteLine("Which location would you like to replinish? (Store ID)");
                     int storeId = Convert.ToInt32(Console.ReadLine());
 
@@ -53,7 +53,18 @@ namespace StoreUI
                             Console.WriteLine("Press any key to continue:");
                             Console.ReadLine();
                         }
-                    }
+                        Console.WriteLine("Product has been replenished");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        return "ReplenishInventory";
+                case "0":
+                    return "MainMenu";
+                default:
+                    Console.WriteLine("Please input a valid response");
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "Main Menu";
+                }
 
             }
         }
