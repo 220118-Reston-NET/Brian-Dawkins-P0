@@ -3,6 +3,7 @@ using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
 using System.Linq;
+using ProductModel;
 
 namespace StoreBL
 {
@@ -89,6 +90,16 @@ namespace StoreBL
         }
 
         public List<StoreFront> GetAllStores()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Products> ViewProductsByStoreId(int c_storeId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ReplenishInventory(int c_productId)
         {
             throw new NotImplementedException();
         }

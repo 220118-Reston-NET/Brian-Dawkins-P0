@@ -57,7 +57,7 @@ namespace StoreUI
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
-                    return "GetCustomerOrder";
+                    return "GetStoreOrder";
                     }
                     
                    default:

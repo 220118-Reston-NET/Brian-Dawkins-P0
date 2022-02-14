@@ -1,5 +1,6 @@
 ﻿using CustomerModel;
 using OrderModel;
+using ProductModel;
 using StoreFrontModel;
 
 namespace StoreBL
@@ -50,8 +51,16 @@ public interface IStoreFrontBL
     /// </summary>
     /// <param name="c_storeId"></param>
     /// <returns>list collection of inventory at each store location</returns>
-    public List<StoreFront> ViewInventory(int c_storeId);
-        List<StoreFront> ViewInventory();
-        List<StoreFront> GetAllStores();
+    List<StoreFront> ViewInventory(int c_storeId);
+    List<StoreFront> ViewInventory();
+    List<StoreFront> GetAllStores();
+
+    List<Products> ViewProductsByStoreId(int c_storeId);
+    /// <summary>
+    /// Will replinish product inventory to base store amount
+    /// </summary>
+    /// <param name="c_productId"></param>
+    void ReplenishInventory(int c_productId);
+
     }
 }
