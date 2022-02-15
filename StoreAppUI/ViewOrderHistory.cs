@@ -16,11 +16,11 @@ namespace StoreUI
         }
         public void Display()
         {
-            foreach (var item in _listOfStores)
-            {
-                Console.WriteLine("==================");
-                 Console.WriteLine(item);
-            }
+            // foreach (var item in _listOfStores)
+            // {
+            //     Console.WriteLine("==================");
+            //      Console.WriteLine(item);
+            // }
             Console.WriteLine("[1] Select Store by Id");
             Console.WriteLine("[0] Go Back");
         }

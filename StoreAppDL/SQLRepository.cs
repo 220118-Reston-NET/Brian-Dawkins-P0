@@ -189,7 +189,7 @@ namespace StoreAppDL
                         //Reader column is NOT based on table structure but based on what your select statement is displaying 
                         OrderId = reader.GetInt32(1),
                         StoreId = reader.GetInt32(0),
-                        Total = reader.GetInt32(2)
+                        _total = reader.GetInt32(2)
                     });
                 }
             }

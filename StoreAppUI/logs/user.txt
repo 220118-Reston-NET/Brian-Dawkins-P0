@@ -168,3 +168,17 @@ PhoneNumber: 777-777-7777
 2022-02-15 15:49:54.342 -05:00 [INF] Displaying View Inventory Menu to user
 2022-02-15 15:50:10.802 -05:00 [INF] Displaying MainMenu to user
 2022-02-15 15:51:44.095 -05:00 [INF] Exiting application
+2022-02-15 15:54:05.277 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 15:55:35.778 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 15:56:02.615 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 15:56:07.223 -05:00 [INF] Exiting application
+2022-02-15 15:56:47.248 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 15:56:55.741 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 15:56:57.853 -05:00 [INF] Exiting application
+2022-02-15 15:57:10.535 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 15:57:18.492 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 15:57:23.084 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 15:57:29.796 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 15:57:36.494 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 15:57:41.754 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 15:57:46.227 -05:00 [INF] Exiting application
