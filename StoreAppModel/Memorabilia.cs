@@ -20,6 +20,12 @@ public class Products
         }
     }
     public string Category { get; set; }
+    public Products()
+    {
+        Name = "";
+        Price = 0;
+        Category = "";
+    }
 
     public override string ToString()
     {
