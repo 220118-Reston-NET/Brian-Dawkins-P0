@@ -76,7 +76,7 @@ namespace StoreBL
 
         public List<Orders> GetOrdersByStoreId(int c_storeId)
         {
-            throw new NotImplementedException();
+            return _repo.GetOrdersByStoreId(c_storeId);
         }
 
         List<StoreFront> IStoreFrontBL.GetAllStores(int c_storeId)

@@ -224,5 +224,38 @@ namespace StoreAppDL
         }
         return listOfStores;
         }
+        public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity)
+        {
+            List<StoreFront> listOfStores = new List<StoreFront>();
+            
+            string sqlQuery = @"Update Inventory set Quantity = @Quanity
+                                where ProductId = @ProductId and StoreId = @StoreId";
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                
+                //Create command object 
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@StoreId", c_storeId);
+                command.Parameters.AddWithValue("@Quantity", c_quantity);
+                command.Parameters.AddWithValue("@ProductId", c_productId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfStores.Add(new StoreFront(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        StoreId = reader.GetInt32(1),
+                        ProductId = reader.GetInt32(0),
+                        Quantity = reader.GetInt32(2)
+                        });
+                         }
+        }
+        return listOfStores;
+        }
     }
 }
+        
