@@ -40,8 +40,8 @@ while(repeat)
         Log.Information("Displaying Replenish Inventory Menu to user");
             menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
-        case "GetStoreOrder":
-        Log.Information("Displaying Get Store Order Menu to user");
+        case "ViewOrderHistory":
+        Log.Information("Displaying View Order History Menu to user");
             menu = new GetStoreOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
         case "ViewInventory":

@@ -20,8 +20,8 @@ namespace StoreUI
             Console.WriteLine("[2] Shop");
             Console.WriteLine("[3] See previous order");
             Console.WriteLine("[4] Find Location");
-            Console.WriteLine("[7] Get order from customer");
-            Console.WriteLine("[8] Get order from store");
+            Console.WriteLine("[7] Get customer order");
+            Console.WriteLine("[8] View Order History from store");
             Console.WriteLine("[9] Replenish Inventory");
             Console.WriteLine("[10] Place Order");
             Console.WriteLine("[0] Exit");
@@ -51,7 +51,7 @@ namespace StoreUI
                 case "7":
                     return "GetCustomerOrder";
                 case "8":
-                    return "GetStoreOrder";
+                    return "ViewOrderHistory";
                 case "9":
                     return "ReplenishInventory";
                 case "10":

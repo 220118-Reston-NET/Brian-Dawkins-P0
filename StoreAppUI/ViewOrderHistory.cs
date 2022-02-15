@@ -7,11 +7,21 @@ namespace StoreUI
 {
     public class ViewOrderHistory : IMenu
     {
+        private List<StoreFront> _listOfStores;
+        private IStoreFrontBL _storeBL;
+        public ViewOrderHistory(IStoreFrontBL c_storeBL)
+        {
+            _storeBL = c_storeBL;
+            _listOfStores = _storeBL.GetAllStores();
+        }
         public void Display()
         {
-            Console.WriteLine("==View Order History==");
-            Console.WriteLine("[2] View Store Order History");
-            Console.WriteLine("[1] View Customer Order History");
+            foreach (var item in _listOfStores)
+            {
+                Console.WriteLine("==================");
+                 Console.WriteLine(item);
+            }
+            Console.WriteLine("[1] Select Store by Id");
             Console.WriteLine("[0] Go Back");
         }
 
@@ -20,11 +30,31 @@ namespace StoreUI
             string userInput = Console.ReadLine();
             switch (userInput)
             {
-                case "2":
-
-                break;
                 case "1":
-                break;
+                    Console.WriteLine("Enter Store Id:");
+
+                    try
+                    {
+                        int storeId = Convert.ToInt32(Console.ReadLine());
+                        List<Orders> listOfOrders = _storeBL.GetOrdersByStoreId(storeId);
+                        foreach (var item in listOfOrders)
+                        {
+                            Console.WriteLine("===================");
+                            Console.WriteLine(item);
+                        }
+
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "MainMenu";
+                    }
+                    catch (FormatException)
+                    {
+                        
+                    Console.WriteLine("Please input a valid response");
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "ViewOrderHistory";
+                    }
                 case "0":
                     return "MainMenu";
                 default:
@@ -35,3 +65,4 @@ namespace StoreUI
             }
         }
     }
+}
