@@ -60,6 +60,7 @@ public interface IStoreFrontBL
     /// </summary>
     /// <param name="c_productId"></param>
     List<StoreFront> ReplenishInventory(int c_storeId,int c_productId, int c_quantity);
+    
 
     }
 }

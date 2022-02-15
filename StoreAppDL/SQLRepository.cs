@@ -200,7 +200,8 @@ namespace StoreAppDL
         {
             List<StoreFront> listOfStores = new List<StoreFront>();
             
-            string sqlQuery = @"select * from Inventory";
+            string sqlQuery = @"select * from Inventory
+                                where StoreId = @StoreId";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -258,6 +259,48 @@ namespace StoreAppDL
         return listOfStores;
         }
         
+       void PlaceOrder (int c_storeId, int c_productId, int c_quantity, int c_total)
+       {
+           List<Orders> listOfOrders = new List<Orders>();
+
+           string sqlQuery = @"select * from Inventory i 
+                                where StoreId = @StoreId
+
+                                select Quantity from Inventory i2
+                                where StoreId = @StoreId and ProductId = @ProductId
+
+                                Update Inventory set Quantity = @Quantity 
+
+                                insert into LineItems 
+                                values(@ProductId, OrderId, @Quantity)
+
+                                select total from Orders o ";
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                
+                //Create command object 
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@StoreId", c_storeId);
+                command.Parameters.AddWithValue("@Quantity", c_quantity);
+                command.Parameters.AddWithValue("@ProductId", c_productId);
+                
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                 listOfOrders.Add(new Orders(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        OrderId = reader.GetInt32(1),
+                        StoreId = reader.GetInt32(0),
+                        _total = reader.GetInt32(2)
+                    });
+                }
+            }
+       }
     }
 }
         

@@ -182,3 +182,10 @@ PhoneNumber: 777-777-7777
 2022-02-15 15:57:36.494 -05:00 [INF] Successful at getting Customer Order
 2022-02-15 15:57:41.754 -05:00 [INF] Displaying MainMenu to user
 2022-02-15 15:57:46.227 -05:00 [INF] Exiting application
+2022-02-15 16:34:40.047 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 16:34:51.171 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 16:34:53.395 -05:00 [INF] Exiting application
+2022-02-15 16:35:21.288 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 16:36:10.076 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 16:36:15.545 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 16:36:24.496 -05:00 [INF] Exiting application

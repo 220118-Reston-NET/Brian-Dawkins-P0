@@ -98,5 +98,7 @@ namespace StoreBL
         {
             return _repo.ReplenishInventory(c_storeId, c_productId, c_quantity);
         }
+
+       
     }
 }

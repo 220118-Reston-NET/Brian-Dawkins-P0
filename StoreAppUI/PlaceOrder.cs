@@ -37,7 +37,6 @@ namespace StoreUI
             switch (userInput)
             {
                 case "1":
-                     
                 case "0":
                     return "MainMenu";
                 default:
