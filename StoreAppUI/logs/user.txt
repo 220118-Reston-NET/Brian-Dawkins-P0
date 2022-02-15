@@ -100,3 +100,30 @@ PhoneNumber: 678-9876
 2022-02-15 10:14:52.746 -05:00 [INF] Displaying View Inventory Menu to user
 2022-02-15 10:15:07.056 -05:00 [INF] Displaying MainMenu to user
 2022-02-15 10:15:39.088 -05:00 [INF] Exiting application
+2022-02-15 11:18:30.544 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 11:18:38.891 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:18:43.731 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 11:18:56.725 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 11:19:02.947 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:19:07.827 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 11:19:25.058 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:19:29.090 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 11:19:33.442 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:20:05.273 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 11:20:29.425 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 11:20:36.928 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 11:20:58.832 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 11:21:00.503 -05:00 [INF] Adding customer 
+Id: 0
+Name: Lebron James
+Address: 345 LA Lakers Way
+PhoneNumber: 777-777-7777
+
+2022-02-15 11:21:00.563 -05:00 [INF] Successful at adding customer!
+2022-02-15 11:21:00.563 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:21:04.454 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 11:21:12.326 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:21:17.063 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 11:21:20.624 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 11:21:24.774 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 11:21:31.999 -05:00 [INF] Exiting application
