@@ -259,22 +259,21 @@ namespace StoreAppDL
         return listOfStores;
         }
         
-       void PlaceOrder (int c_storeId, int c_productId, int c_quantity, int c_total)
+        public void PlaceOrder(int c_customerId, int c_storeId, int c_total, List<LineItems> c_cart)
        {
-           List<Orders> listOfOrders = new List<Orders>();
 
-           string sqlQuery = @"select * from Inventory i 
-                                where StoreId = @StoreId
 
-                                select Quantity from Inventory i2
-                                where StoreId = @StoreId and ProductId = @ProductId
+           string sqlQuery = @"insert into Orders 
+                                values (@total, @StoreId, @CustomerId);
+                                select scope_identity();";
 
-                                Update Inventory set Quantity = @Quantity 
+           string sqlQuery2 = @"update Inventory set Quantity = Quantity - @Quantity
+                                where ProductId = @ProductId and StoreId = @StoreId"; 
 
-                                insert into LineItems 
-                                values(@ProductId, OrderId, @Quantity)
+           string sqlQuery3 =  @"insert into LineItems 
+                                values (@ProductId, @OrderId, @Quantity)";
 
-                                select total from Orders o ";
+                                
             
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -283,24 +282,35 @@ namespace StoreAppDL
                 
                 //Create command object 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@total", c_total);
                 command.Parameters.AddWithValue("@StoreId", c_storeId);
-                command.Parameters.AddWithValue("@Quantity", c_quantity);
-                command.Parameters.AddWithValue("@ProductId", c_productId);
+                command.Parameters.AddWithValue("@CustomerId", c_customerId);
+                int OrderId = Convert.ToInt32(command.ExecuteScalar());
                 
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+               
+                foreach(var item in c_cart)
                 {
-                 listOfOrders.Add(new Orders(){
-                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
-                        OrderId = reader.GetInt32(1),
-                        StoreId = reader.GetInt32(0),
-                        _total = reader.GetInt32(2)
-                    });
+                    SqlCommand command1 = new SqlCommand(sqlQuery2, con);
+                    command1.Parameters.AddWithValue("@Quantity", item.Quantity);
+                    command1.Parameters.AddWithValue("@ProductId", item.ProductId);
+                    command1.Parameters.AddWithValue("@StoreId", c_storeId);
+
+                    command1.ExecuteNonQuery();
+
+                    SqlCommand command2 = new SqlCommand(sqlQuery3, con);
+                    command2.Parameters.AddWithValue("@ProductId", item.ProductId);
+                    command2.Parameters.AddWithValue("@OrderId", OrderId);
+                    command2.Parameters.AddWithValue("@Quantity", item.Quantity);
+
+                    command2.ExecuteNonQuery();
                 }
+
+               
+                
             }
        }
+
+        
     }
 }
         

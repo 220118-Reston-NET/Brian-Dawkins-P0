@@ -1,6 +1,7 @@
 ﻿using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
+using LineItemModel;
 
 namespace StoreAppDL
 {
@@ -40,6 +41,7 @@ public interface IRepository
         //List<StoreFront> GetAllStores();
     
      public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity);
-    
+
+    void PlaceOrder(int c_customerId, int c_storeId, int c_total, List<LineItems> c_cart);
     }
 }
