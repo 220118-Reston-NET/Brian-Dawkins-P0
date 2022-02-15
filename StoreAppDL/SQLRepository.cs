@@ -1,3 +1,4 @@
+using System.Data;
 using System.Data.SqlClient;
 using CustomerModel;
 using OrderModel;
@@ -77,13 +78,11 @@ namespace StoreAppDL
 
             return listOfCustomers;
         }
-        public List<StoreFront> GetAllStores(int c_storeId)
+        public List<StoreFront> GetAllStores()
         {
             List<StoreFront> listofStores = new List<StoreFront>();
 
-            string sqlQuery = @"select o.StoreId, o.total from Orders o 
-                                inner join Location l on o.StoreId = L.StoreId 
-                                Where o.StoreId = @StoreId";
+            string sqlQuery = @"select * from Location";
 
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
@@ -91,7 +90,7 @@ namespace StoreAppDL
                 con.Open();
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@StoreId", c_storeId);
+                //command.Parameters.AddWithValue("@StoreId", c_storeId);
 
                 SqlDataReader reader = command.ExecuteReader();
                 
@@ -99,12 +98,18 @@ namespace StoreAppDL
                 {
                     listofStores.Add(new StoreFront(){
                         //Reader column is NOT based on table structure but based on what your select statement is displaying 
-                        OrderId = reader.GetInt32(1),
-                        StoreId = reader.GetInt32(0)
+                        Name = reader.GetString(1),
+                        StoreId = reader.GetInt32(0),
+                        Address = reader.GetString(2)
                     });
                 }
             }
             return listofStores;
+        }
+
+        public List<StoreFront> GetAllStores(int c_storeId)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Orders> GetOrdersByCustomerId(int c_customerId)
@@ -158,7 +163,8 @@ namespace StoreAppDL
                     listOfStores.Add(new StoreFront(){
                         //Reader column is NOT based on table structure but based on what your select statement is displaying 
                         StoreId = reader.GetInt32(1),
-                        ProductId = reader.GetInt32(0)
+                        ProductId = reader.GetInt32(0),
+                        Quantity = reader.GetInt32(2)
                     });
             }
         }

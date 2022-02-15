@@ -8,6 +8,7 @@ namespace StoreFrontModel
         public int OrderId { get; set; }
         public int StoreId { get; set; }
         public int ProductId { get; set; }
+        public int Quantity { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         //public string ListOfProducts { get; set; }
