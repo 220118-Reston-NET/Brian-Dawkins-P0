@@ -31,32 +31,6 @@ namespace StoreUI
             switch (userInput)
             {
                 case "1":
-                    Console.WriteLine("Which location would you like to replinish? (Store ID)");
-                    int storeId = Convert.ToInt32(Console.ReadLine());
-
-                    try
-                    {
-                        List<StoreFront> listOfStores = IStoreFrontBL.ViewInventory(int storeId);
-                        Console.WriteLine("Here is the store inventory");
-                        List<Products> products =  IStoreFrontBL.ViewProductsByStoreId(c_storeId);
-                        foreach(var item in products)
-                        {
-                            Console.WriteLine(item);
-                        }
-                        Console.WriteLine("Enter the Id for the item you want to replinish");
-                        int ProductId = Convert.ToInt32(Console.ReadLine);
-                        IStoreFrontBL.ReplenishInventory(int c_productId);
-                        }
-                        catch(System.Exception e)
-                        {
-                            Console.WriteLine(e.Message);
-                            Console.WriteLine("Press any key to continue:");
-                            Console.ReadLine();
-                        }
-                        Console.WriteLine("Product has been replenished");
-                        Console.WriteLine("Press enter to continue");
-                        Console.ReadLine();
-                        return "ReplenishInventory";
                 case "0":
                     return "MainMenu";
                 default:
