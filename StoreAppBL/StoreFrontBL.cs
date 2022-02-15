@@ -94,7 +94,7 @@ namespace StoreBL
             throw new NotImplementedException();
         }
 
-        public void ReplenishInventory(int c_productId)
+        public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity)
         {
             throw new NotImplementedException();
         }

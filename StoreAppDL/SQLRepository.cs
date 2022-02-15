@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
+using LineItemModel;
 
 namespace StoreAppDL
 {
@@ -256,6 +257,7 @@ namespace StoreAppDL
         }
         return listOfStores;
         }
+        
     }
 }
         

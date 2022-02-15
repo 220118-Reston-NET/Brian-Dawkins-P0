@@ -8,7 +8,6 @@ namespace StoreUI
     public class ReplenishInventory : IMenu
     {
         private List<StoreFront> _listOfStore = new List<StoreFront>();
-
         private IStoreFrontBL _storeBL;
 
         public ReplenishInventory(IStoreFrontBL c_storeBL)
@@ -30,10 +29,32 @@ namespace StoreUI
 
             switch (userInput)
             {
-                case "1":
                 case "0":
                     return "MainMenu";
-                default:
+                case "1":
+                    Console.WriteLine("Enter Store ID");
+                    Console.WriteLine("Enter product ID");
+                    Console.WriteLine("Enter Quantity you wish to replenish");
+                   try
+                    {
+                        int storeId = Convert.ToInt32(Console.ReadLine());
+                        int productId = Convert.ToInt32(Console.ReadLine());
+                        int Quanity = Convert.ToInt32(Console.ReadLine());
+                        List<StoreFront> listOfStore = _storeBL.ReplenishInventory(storeId, productId, Quanity);
+                    {
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "MainMenu";
+                    }
+                    }
+                    catch (FormatException)
+                    {
+                    Console.WriteLine("Please input a valid response");
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "ReplenishInventory";
+                    }
+                    default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();

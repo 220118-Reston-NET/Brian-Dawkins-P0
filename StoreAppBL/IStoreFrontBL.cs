@@ -28,11 +28,11 @@ public interface IStoreFrontBL
     /// <returns></returns>
     List<Customer> SearchCustomer(string c_name);
 
-    /// <summary>
-    /// Will give a list of customers from the database
-    /// </summary>
-    /// <returns>list collection with customer objects</returns>
-    List<Customer> GetAllCustomers();
+        /// <summary>
+        /// Will give a list of customers from the database
+        /// </summary>
+        /// <returns>list collection with customer objects</returns>
+        List<Customer> GetAllCustomers();
     /// <summary>
     /// Will give the order associated with a specific customer Id
     /// </summary>
@@ -59,7 +59,7 @@ public interface IStoreFrontBL
     /// Will replinish product inventory to base store amount
     /// </summary>
     /// <param name="c_productId"></param>
-    void ReplenishInventory(int c_productId);
+    List<StoreFront> ReplenishInventory(int c_storeId,int c_productId, int c_quantity);
 
     }
 }
