@@ -70,6 +70,7 @@ while(repeat)
             repeat = false;
             break;
         default:
+            Log.Information("User entered an ivalid key");
             Console.WriteLine("Page does not exist!");
             Console.WriteLine("Please press Enter to continue");
             Console.ReadLine();
