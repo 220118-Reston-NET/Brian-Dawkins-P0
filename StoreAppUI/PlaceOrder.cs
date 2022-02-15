@@ -1,3 +1,4 @@
+using CustomerModel;
 using OrderModel;
 using ProductModel;
 using StoreBL;
@@ -7,6 +8,20 @@ namespace StoreUI
 {
     public class PlaceOrder : IMenu
     {
+        private static Customer customerid = new Customer();
+        private static Orders _newOrder = new Orders();
+        private static StoreFront _newFront = new StoreFront();
+        
+
+        private IStoreFrontBL _StoreFrontBL;
+        private List<Customer> listOfCustomers;
+        public PlaceOrder(IStoreFrontBL c_customerId)
+        {
+            _StoreFrontBL = c_customerId;
+            listOfCustomers = _StoreFrontBL.GetAllCustomers();
+        }
+
+        public static Customer selectedCustomer = new Customer(); 
         public void Display()
         {
             Console.WriteLine("==Welcome to the ordering menu!===");

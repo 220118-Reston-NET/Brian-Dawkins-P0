@@ -34,7 +34,8 @@ create table customer_phonenumbers(
 	phoneNumberId int foreign key references phoneNumber(phoneNumberId)
 );
 
-
+insert into customer_phonenumbers 
+values (1,1), (2,2)
 	
 select * from customer_phonenumbers cp 
 --One to Many relationship between customer and list of orders
@@ -52,7 +53,8 @@ create table Orders(
 	OrderId int identity (1,1) primary key,
 	total int 
 );
-
+ insert into Orders 
+ values (30, 2, 1), (45, 2, 3), (70, 4, 2), (10, 5, 5)
 select * from Orders o 
 
 insert into Orders (total)  
@@ -85,6 +87,7 @@ values ('Jerseys', 50),
 	('Helmets', 50),
 	('Shoes', 60)
 	
+
 --Ends my tables that belong to my Order Model 
 
 --Starts the relationship tables between Orders, Locations, and LineItems 
@@ -138,12 +141,36 @@ create table Product(
 	Category varchar(50)
 )
 
+insert into Product 
+values ('Jerseys', 10, 'Basketball'), ('Helmets', 15, 'Football'), ('Cleats', 15, 'Baseball'), ('Skates', 20, 'Hockey')
+
+select * from Location l 
+
+
 create table Inventory(
 	ProductId int foreign key references Product(ProductId),
 	StoreId int foreign key references Location(StoreId),
 	Quantity int
 )
 
+insert into Inventory 
+values (1, 2, 100), (2, 2, 100), (3, 2, 100), (4, 2, 100), (1, 3, 100), (2, 3, 100),
+ (3, 3, 100), (4, 3, 100), (1, 4, 100), (2, 4, 100), (3, 4, 100), (4, 4, 100), (1, 5, 100),
+ (2, 5, 100), (3, 5, 100), (4, 5, 100)
 select * from Inventory i 
+
+select o.StoreId, o.OrderId, o.total from Orders o 
+inner join Location l on o.StoreId = L.StoreId 
+where 
+
+
+
+select * from customer c 
+
+
+
+
+
+
 
 
