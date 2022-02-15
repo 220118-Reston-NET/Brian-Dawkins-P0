@@ -36,9 +36,9 @@ namespace StoreUI
 
                     try
                     {
-                        List<StoreFront> listOfStores = IStoreFrontBL.ViewInventory(int c_storeId);
+                        List<StoreFront> listOfStores = IStoreFrontBL.ViewInventory(int storeId);
                         Console.WriteLine("Here is the store inventory");
-                        List<Products> products =  IStoreFrontBL.ViewProductsByStoreId(int c_storeId);
+                        List<Products> products =  IStoreFrontBL.ViewProductsByStoreId(c_storeId);
                         foreach(var item in products)
                         {
                             Console.WriteLine(item);

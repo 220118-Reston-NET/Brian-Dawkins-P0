@@ -41,5 +41,24 @@ namespace StoreUnitTest
             Assert.NotNull(price._price);//checks that the property is not null meaning we did set data in this property
             Assert.Equal(validPrice, price._price);//checks if the property does indeed hold the same value as what we set it as
         }
+         /// <summary>
+    /// Checks the validation for Name property for valid data
+    /// </summary>
+    /// [Fact] is a data annotation in C# and all it means is it will tell the compiler that this specific method is a unit test
+    [Fact]
+    public void NameShouldSetValidData()
+    {
+        //Arrange
+        Products prod = new Products();
+        string validName = "Brian Dawkins";
+        
+
+        //Act
+        prod.Name = validName;
+
+        //Assert
+        Assert.NotNull(prod.Name); //checks that the property is not null meaning we did set data in this property
+        Assert.Equal(validName, prod.Name); //checks if the property does indeed hold the same value as what we set it as
+    }
     }
 }
