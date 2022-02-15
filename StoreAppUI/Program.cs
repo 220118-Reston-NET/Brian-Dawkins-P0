@@ -32,17 +32,17 @@ while(repeat)
 
     switch (ans)
     {
-        case "PlaceOrder":
-        Log.Information("Displaying Place Order Menu to user");
-            menu = new PlaceOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
-            break;
-        case "ReplenishInventory":
-        Log.Information("Displaying Replenish Inventory Menu to user");
-            menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
-            break;
+        // case "PlaceOrder":
+        // Log.Information("Displaying Place Order Menu to user");
+        //     menu = new PlaceOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
+        //     break;
+        // case "ReplenishInventory":
+        // Log.Information("Displaying Replenish Inventory Menu to user");
+        //     menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
+        //     break;
         case "ViewOrderHistory":
         Log.Information("Displaying View Order History Menu to user");
-            menu = new GetStoreOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
+            menu = new ViewOrderHistory(new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
         case "ViewInventory":
         Log.Information("Displaying View Inventory Menu to user");
