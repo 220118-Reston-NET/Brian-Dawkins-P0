@@ -23,6 +23,7 @@ namespace StoreUI
             Console.WriteLine("[7] Get order from customer");
             Console.WriteLine("[8] Get order from store");
             Console.WriteLine("[9] Replenish Inventory");
+            Console.WriteLine("[10] Place Order");
             Console.WriteLine("[0] Exit");
         }
         //Need to add search customers option into display 
@@ -53,6 +54,8 @@ namespace StoreUI
                     return "GetStoreOrder";
                 case "9":
                     return "ReplenishInventory";
+                case "10":
+                    return "PlaceOrder";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
