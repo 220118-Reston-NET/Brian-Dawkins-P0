@@ -52,7 +52,6 @@ public interface IStoreFrontBL
     /// <param name="c_storeId"></param>
     /// <returns>list collection of inventory at each store location</returns>
     List<StoreFront> ViewInventory(int c_storeId);
-    List<StoreFront> ViewInventory();
     List<StoreFront> GetAllStores();
 
     List<Products> ViewProductsByStoreId(int c_storeId);

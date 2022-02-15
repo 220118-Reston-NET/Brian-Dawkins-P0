@@ -69,11 +69,6 @@ namespace StoreBL
         //             .Where(store => store.StoreId.Equals(c_storeId))//Where method is designed to filter a collection based on a condition
         //             .ToList(); //ToList method just converts into a list collection that our method needs to return
         // }
-        public List<StoreFront> ViewInventory()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<StoreFront> ViewInventory(int c_storeId)
         {
             throw new NotImplementedException();
@@ -91,7 +86,7 @@ namespace StoreBL
 
         public List<StoreFront> GetAllStores()
         {
-            throw new NotImplementedException();
+            return _repo.GetAllStores();
         }
 
         public List<Products> ViewProductsByStoreId(int c_storeId)

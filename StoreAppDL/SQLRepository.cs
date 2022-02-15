@@ -165,6 +165,35 @@ namespace StoreAppDL
             }
             return listOfOrders;
         }
+        public List<Orders> GetOrdersByStoreId(int c_storeId)
+        {
+            List<Orders> listOfOrders = new List<Orders>();
+
+            string sqlQuery = @"select o.StoreId, o.OrderId, o.total from Orders o 
+                                inner join Location l on o.StoreId = L.StoreId 
+                                where o.StoreId = @StoreId";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@StoreId", c_storeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    listOfOrders.Add(new Orders(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        OrderId = reader.GetInt32(1),
+                        StoreId = reader.GetInt32(0),
+                        Total = reader.GetInt32(2)
+                    });
+                }
+            }
+            return listOfOrders;
+        }
 
         public List<StoreFront> ViewInventory(int c_storeId)
         {
@@ -194,7 +223,6 @@ namespace StoreAppDL
             }
         }
         return listOfStores;
-    }
-    
+        }
     }
 }
