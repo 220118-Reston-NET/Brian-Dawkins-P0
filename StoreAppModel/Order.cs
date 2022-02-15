@@ -36,5 +36,10 @@ namespace OrderModel
 
         public int CustomerId { get; set; }
         public string StoreLocation {get; set; }
+         
+        public override string ToString()
+        {
+            return $"Id: {CustomerId}\nOderId: {OrderId}\nStoreId: {StoreId}\nTotal: {_total}\n";
+        }
     }
 }

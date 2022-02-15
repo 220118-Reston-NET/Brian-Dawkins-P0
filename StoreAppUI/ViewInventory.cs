@@ -40,7 +40,7 @@ namespace StoreUI
                     try
                     {
                         int storeId = Convert.ToInt32(Console.ReadLine());
-                        List<Orders> listOfStore = _storeBL.GetOrdersByCustomerId(storeId);
+                        List<StoreFront> listOfStore = _storeBL.ViewInventory(storeId);
                         foreach (var item in listOfStore)
                         {
                             Console.WriteLine("===================");

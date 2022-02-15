@@ -38,5 +38,7 @@ public interface IRepository
 
     List<StoreFront> ViewInventory(int c_storeId);
         //List<StoreFront> GetAllStores();
+    
+     public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity);
     }
 }

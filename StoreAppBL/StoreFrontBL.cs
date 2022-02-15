@@ -71,7 +71,7 @@ namespace StoreBL
         // }
         public List<StoreFront> ViewInventory(int c_storeId)
         {
-            throw new NotImplementedException();
+            return _repo.ViewInventory(c_storeId);
         }
 
         public List<Orders> GetOrdersByStoreId(int c_storeId)
@@ -96,7 +96,7 @@ namespace StoreBL
 
         public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity)
         {
-            throw new NotImplementedException();
+            return _repo.ReplenishInventory(c_storeId, c_productId, c_quantity);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace StoreFrontModel
 
         public override string ToString()
         {
-            return $"Name: {Name}\nAddress: {Address}";
+            return $"StoreId: {StoreId}\nProductId: {ProductId}\nQuantity {Quantity}";
         }
     }
 }

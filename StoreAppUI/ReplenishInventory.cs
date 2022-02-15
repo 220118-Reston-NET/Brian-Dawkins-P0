@@ -37,11 +37,13 @@ namespace StoreUI
                     Console.WriteLine("Enter Quantity you wish to replenish");
                    try
                     {
-                        int storeId = Convert.ToInt32(Console.ReadLine());
-                        int productId = Convert.ToInt32(Console.ReadLine());
-                        int Quanity = Convert.ToInt32(Console.ReadLine());
-                        List<StoreFront> listOfStore = _storeBL.ReplenishInventory(storeId, productId, Quanity);
+                        int c_storeId = Convert.ToInt32(Console.ReadLine());
+                        int c_productId = Convert.ToInt32(Console.ReadLine());
+                        int c_quanity = Convert.ToInt32(Console.ReadLine());
+                        List<StoreFront> listOfStore = _storeBL.ReplenishInventory(c_storeId, c_productId, c_quanity);
                     {
+                    Log.Information("Successfully Replenished Store");
+                    Console.WriteLine("You have successfully replenished the store ");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
                     return "MainMenu";

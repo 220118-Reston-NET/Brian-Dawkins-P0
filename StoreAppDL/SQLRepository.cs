@@ -229,7 +229,7 @@ namespace StoreAppDL
         {
             List<StoreFront> listOfStores = new List<StoreFront>();
             
-            string sqlQuery = @"Update Inventory set Quantity = @Quanity
+            string sqlQuery = @"Update Inventory set Quantity = @Quantity
                                 where ProductId = @ProductId and StoreId = @StoreId";
             
             using (SqlConnection con = new SqlConnection(_connectionStrings))
