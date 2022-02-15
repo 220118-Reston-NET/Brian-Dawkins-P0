@@ -40,6 +40,10 @@ while(repeat)
         // Log.Information("Displaying Replenish Inventory Menu to user");
         //     menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
         //     break;
+        case "ReplenishInventory":
+        Log.Information("Displaying Replenish Inventory Menu to user");
+            menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
         case "ViewOrderHistory":
         Log.Information("Displaying View Order History Menu to user");
             menu = new ViewOrderHistory(new StoreFrontBL(new SQLRepository(_connectionString)));

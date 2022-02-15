@@ -131,3 +131,5 @@ PhoneNumber: 777-777-7777
 2022-02-15 11:50:35.601 -05:00 [INF] Displaying View Order History Menu to user
 2022-02-15 12:34:38.146 -05:00 [INF] Displaying View Order History Menu to user
 2022-02-15 12:38:50.412 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 15:12:59.182 -05:00 [INF] User entered an ivalid key
+2022-02-15 15:13:03.779 -05:00 [INF] Exiting application
