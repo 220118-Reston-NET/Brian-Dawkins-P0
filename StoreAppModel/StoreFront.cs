@@ -11,6 +11,7 @@ namespace StoreFrontModel
         public int Quantity { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
+        public int Total { get; set; }
         //public string ListOfProducts { get; set; }
         // private string _listOfOrders { get; set; }
 

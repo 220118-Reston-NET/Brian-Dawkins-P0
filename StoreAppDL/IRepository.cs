@@ -34,6 +34,7 @@ public interface IRepository
     List<Orders> GetOrdersByCustomerId(int c_customerId);
 
     List<StoreFront> GetAllStores(int c_storeId);
+
     List<StoreFront> ViewInventory(int c_storeId);
         //List<StoreFront> GetAllStores();
     }
