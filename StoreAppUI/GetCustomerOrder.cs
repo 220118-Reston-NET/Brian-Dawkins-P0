@@ -46,7 +46,7 @@ namespace StoreUI
                             Console.WriteLine("===================");
                             Console.WriteLine(item);
                         }
-
+                    Log.Information("Successful at getting Customer Order");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
                     return "MainMenu";
