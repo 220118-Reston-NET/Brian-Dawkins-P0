@@ -66,7 +66,7 @@ create table Location(
 	LName varchar(50),
 	LAddress varchar(50),
 );
-
+select * from Location l 
 insert into Location 
 values ('Southside', '2431 Southside Blvd'),
 	('Northside', '5679 Northside Blvd'),
@@ -78,15 +78,14 @@ create table LineItems(
 	OrderId int foreign key references Orders(OrderId),
 	Quantity int 
 )
+
+insert into LineItems 
+values (1, 2, 5)
 alter table LineItems 
 add Quantity int
 
 select * from LineItems li 
 insert into LineItems 
-values ('Jerseys', 50),
-	('Helmets', 50),
-	('Shoes', 60)
-	
 
 --Ends my tables that belong to my Order Model 
 
@@ -153,6 +152,9 @@ create table Inventory(
 	Quantity int
 )
 
+Update Inventory set Quantity = 10
+where ProductId= 1 and StoreId = 2
+
 insert into Inventory 
 values (1, 2, 100), (2, 2, 100), (3, 2, 100), (4, 2, 100), (1, 3, 100), (2, 3, 100),
  (3, 3, 100), (4, 3, 100), (1, 4, 100), (2, 4, 100), (3, 4, 100), (4, 4, 100), (1, 5, 100),
@@ -163,14 +165,50 @@ select o.StoreId, o.OrderId, o.total from Orders o
 inner join Location l on o.StoreId = L.StoreId 
 where 
 
-
-
+select i.ProductId, StoreId, Quantity from Inventory i 
+inner join Product p on i.ProductId = p.ProductId 
+where StoreId = 3
 select * from customer c 
 
+select o.OrderId, o.StoreId, total from Orders o 
+inner join Location l on o.StoreId = l.StoreId 
 
+select customerId from customer c 
 
+select * from Inventory i 
+where StoreId = 2
 
+select Quantity from Inventory i2
+where StoreId = 2 and ProductId = 2
 
+update Inventory set Quantity = Quantity - 1
+where ProductId = 1 and StoreId = 2 
+
+select * from Orders o
+
+insert into Orders 
+values (100, 3, 3)
+
+insert into LineItems 
+values ()
+
+select o.OrderId, o.StoreId, total from Orders o 
+
+select * from LineItems li 
+insert into LineItems 
+values (1,2,3)
+
+select * from Inventory i 
+
+select * from Product p 
+
+insert into Inventory values (ProductId, StoreId, Name, Price, Quantity)
+
+select * from Location l 
+
+insert into In
+
+INSERT INTO Product (Name, Price, Category, Description) VALUES('', 0, '', '')
 
 
 
