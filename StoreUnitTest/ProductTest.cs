@@ -1,4 +1,4 @@
-using ProductModel;
+using MemorabiliaModel;
 using Xunit;
 
 namespace StoreUnitTest
@@ -13,7 +13,7 @@ namespace StoreUnitTest
         public void CategoryShouldSetValidData()
         {
             //Arrange
-            Products cat = new Products();
+            Memorabilia cat = new Memorabilia();
             string validCat = "Basketball";
         
             //Act
@@ -31,8 +31,8 @@ namespace StoreUnitTest
         public void PriceShouldSetValidData()
         {
             //Arrange
-            Products price = new Products();
-            double validPrice = 5.99;
+            Memorabilia price = new Memorabilia();
+            int validPrice = 5;
         
             //Act
             price._price = validPrice;
@@ -49,7 +49,7 @@ namespace StoreUnitTest
     public void NameShouldSetValidData()
     {
         //Arrange
-        Products prod = new Products();
+        Memorabilia prod = new Memorabilia();
         string validName = "Brian Dawkins";
         
 

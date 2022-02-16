@@ -5,7 +5,7 @@ public class Memorabilia
     public int ProductId { get; set; }
     public string Name { get; set; }
     public int _price { get; set; }
-    public double Price
+    public int Price
     {
         get {return Price; }
         set
@@ -21,12 +21,12 @@ public class Memorabilia
         }
     }
     public string Category { get; set; }
-    public Memorabilia()
-    {
-        Name = "";
-        Price = 0;
-        Category = "";
-    }
+    // public Memorabilia()
+    // {
+    //     Name = "";
+    //     Price = 0;
+    //     Category = "";
+    // }
 
     public override string ToString()
     {
