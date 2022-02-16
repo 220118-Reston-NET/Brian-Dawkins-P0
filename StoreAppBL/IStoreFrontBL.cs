@@ -1,6 +1,6 @@
 ﻿using CustomerModel;
 using OrderModel;
-using ProductModel;
+using StoreAppModel;
 using StoreFrontModel;
 
 namespace StoreBL
@@ -53,14 +53,20 @@ public interface IStoreFrontBL
     /// <returns>list collection of inventory at each store location</returns>
     List<StoreFront> ViewInventory(int c_storeId);
     List<StoreFront> GetAllStores();
-
-    List<Products> ViewProductsByStoreId(int c_storeId);
+    StoreFront GetStoresById(int c_storeId);
+    List<ProductModel> GetProductsByStoreId(int c_storeId);
     /// <summary>
     /// Will replinish product inventory to base store amount
     /// </summary>
     /// <param name="c_productId"></param>
     List<StoreFront> ReplenishInventory(int c_storeId,int c_productId, int c_quantity);
     
-
+    ProductModel AddProducts(ProductModel p_name);
+    List<ProductModel> GetProducts();
+    public Customer GetCustomerByID(int customerId)
+    {
+        return GetAllCustomers().Where(customer => customer.CustomerId.Equals(customerId)).First();
+    }
+    void PlaceOrder(int c_customerId, int c_storeId, int c_total, List<LineItems> c_cart);
     }
 }

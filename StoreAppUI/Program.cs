@@ -40,6 +40,22 @@ while(repeat)
         // Log.Information("Displaying Replenish Inventory Menu to user");
         //     menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));
         //     break;
+        case "AddProduct":
+        Log.Information("Displaying add product menu to user");
+            menu = new AddProducts(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
+        case "ShopMenu":
+        Log.Information("Displaying ShopMenu to user");
+            menu = new ShopMenu(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
+        case "ShopUI":
+        Log.Information("Displaying ShopUI Menu to user");
+            menu = new ShopUI(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
+        case "PlaceOrder":
+        Log.Information("Displaying Place Order Menu to user");
+            menu = new PlaceOrder(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
         case "ReplenishInventory":
         Log.Information("Displaying Replenish Inventory Menu to user");
             menu = new ReplenishInventory(new StoreFrontBL(new SQLRepository(_connectionString)));

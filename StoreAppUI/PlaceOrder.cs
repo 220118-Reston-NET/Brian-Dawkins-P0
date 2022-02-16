@@ -1,6 +1,6 @@
 using CustomerModel;
 using OrderModel;
-using ProductModel;
+using MemorabiliaModel;
 using StoreBL;
 using StoreFrontModel;
 
@@ -9,8 +9,8 @@ namespace StoreUI
     public class PlaceOrder : IMenu
     {
         private static Customer customerid = new Customer();
-        private static Orders _newOrder = new Orders();
-        private static StoreFront _newFront = new StoreFront();
+        // private static Orders _newOrder = new Orders();
+        // private static StoreFront _newFront = new StoreFront();
         
 
         private IStoreFrontBL _StoreFrontBL;
@@ -37,7 +37,17 @@ namespace StoreUI
             switch (userInput)
             {
                 case "1":
-                    
+                    Log.Information("User is placing order");
+                    Console.WriteLine("Please Enter customer ID");
+                    int customerId = Convert.ToInt32(Console.ReadLine());
+                    while (listOfCustomers.All(customerid => customerid.CustomerId != customerId))
+                    {
+                        Console.WriteLine("Please Enter customer ID");
+                        customerId = Convert.ToInt32(Console.ReadLine());
+                    }
+                    selectedCustomer = _StoreFrontBL.GetCustomerByID(customerId);
+                    Console.ReadLine();
+                    return "ShopUI";
                 case "0":
                     return "MainMenu";
                 default:

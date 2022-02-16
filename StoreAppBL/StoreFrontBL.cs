@@ -3,7 +3,7 @@ using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
 using System.Linq;
-using ProductModel;
+using StoreAppModel;
 
 namespace StoreBL
 {
@@ -73,6 +73,10 @@ namespace StoreBL
         {
             return _repo.ViewInventory(c_storeId);
         }
+        public List<ProductModel> GetProductsByStoreID(int c_storeId)
+        {
+            return GetProducts().FindAll(p =>p.productID.Equals(c_storeId));
+        }
 
         public List<Orders> GetOrdersByStoreId(int c_storeId)
         {
@@ -89,16 +93,53 @@ namespace StoreBL
             return _repo.GetAllStores();
         }
 
-        public List<Products> ViewProductsByStoreId(int c_storeId)
-        {
-            throw new NotImplementedException();
-        }
+        // public List<Products> ViewProductsByStoreId(int c_storeId)
+        // {
+        //     throw new NotImplementedException();
+        // }
 
         public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity)
         {
             return _repo.ReplenishInventory(c_storeId, c_productId, c_quantity);
         }
+        public  StoreFront GetStoresById(int storeid)
+        {
+            return GetAllStores().Where(storeid=>storeid.Equals(storeid)).First();
 
-       
+        }
+        public List<ProductModel> GetProductsByStoreId(int storeid)
+        {
+            List<ProductModel> listOfProduct = new List<ProductModel>();
+            foreach (var p_name in GetProductsByStoreID(storeid))
+            {
+                listOfProduct.Add(GetProducts().Find(p => p.productID.Equals(p_name.productID)));
+            }
+            //return GetAllProducts().Where(storeID=> storeID.Equals(storeid)).ToList();
+            return listOfProduct;
+        }
+
+        public List<ProductModel> GetProducts()
+        {
+            return _repo.GetProducts();
+        }
+        public void PlaceOrder(int c_customerId, int c_storeId, int c_total, List<LineItems> c_cart)
+        {
+
+        }
+
+        public ProductModel AddProducts(ProductModel pName)
+        {
+            return _repo.AddProduct(pName);
+        }
+
+        public List<Inventory> ViewInventoryByStoreId(int c_storeId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Inventory> GetInventory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

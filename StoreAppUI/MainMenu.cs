@@ -24,6 +24,7 @@ namespace StoreUI
             Console.WriteLine("[8] View Order History from store");
             Console.WriteLine("[9] Replenish Inventory");
             Console.WriteLine("[10] Place Order");
+            Console.WriteLine("[11] Add Product");
             Console.WriteLine("[0] Exit");
         }
         //Need to add search customers option into display 
@@ -56,6 +57,8 @@ namespace StoreUI
                     return "ReplenishInventory";
                 case "10":
                     return "PlaceOrder";
+                case "11":
+                    return "AddProduct";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

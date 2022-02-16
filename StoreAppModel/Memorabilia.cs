@@ -1,9 +1,10 @@
-﻿namespace ProductModel;
-public class Products
+﻿namespace MemorabiliaModel
+{
+public class Memorabilia
 {
     public int ProductId { get; set; }
     public string Name { get; set; }
-    public double _price { get; set; }
+    public int _price { get; set; }
     public double Price
     {
         get {return Price; }
@@ -20,7 +21,7 @@ public class Products
         }
     }
     public string Category { get; set; }
-    public Products()
+    public Memorabilia()
     {
         Name = "";
         Price = 0;
@@ -32,4 +33,5 @@ public class Products
         return $"=================\nId: {ProductId}\nName: {Name}\nPrice: {_price}\nCatogory: {Category}";
     }
 
+    }
 }

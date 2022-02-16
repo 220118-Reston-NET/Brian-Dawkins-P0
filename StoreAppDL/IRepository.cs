@@ -2,6 +2,7 @@
 using OrderModel;
 using StoreFrontModel;
 using LineItemModel;
+using StoreAppModel;
 
 namespace StoreAppDL
 {
@@ -36,12 +37,14 @@ public interface IRepository
     List<Orders> GetOrdersByStoreId(int c_storeId);
 
     List<StoreFront> GetAllStores();
+    List<ProductModel> GetProducts();
 
     List<StoreFront> ViewInventory(int c_storeId);
         //List<StoreFront> GetAllStores();
     
      public List<StoreFront> ReplenishInventory(int c_storeId, int c_productId, int c_quantity);
 
+    ProductModel AddProduct(ProductModel p_name);
     void PlaceOrder(int c_customerId, int c_storeId, int c_total, List<LineItems> c_cart);
     }
 }

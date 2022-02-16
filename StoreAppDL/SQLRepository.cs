@@ -4,6 +4,7 @@ using CustomerModel;
 using OrderModel;
 using StoreFrontModel;
 using LineItemModel;
+using StoreAppModel;
 
 namespace StoreAppDL
 {
@@ -108,41 +109,41 @@ namespace StoreAppDL
             return listofStores;
         }
 
-        public List<StoreFront> GetAllStores(int c_storeId)
-        {
-            List<StoreFront> listOfStores = new List<StoreFront>();
+        // public List<StoreFront> GetAllStoresById(int c_storeId)
+        // {
+        //     List<StoreFront> listOfStores = new List<StoreFront>();
 
-            string sqlQuery = @"select o.OrderId, o.StoreId, total from Orders o 
-                                inner join Location l on o.StoreId = l.StoreId
-                                where o.StoreId = @StoreId";
+        //     string sqlQuery = @"select o.OrderId, o.StoreId, total from Orders o 
+        //                         inner join Location l on o.StoreId = l.StoreId
+        //                         where o.StoreId = @StoreId";
             
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-                con.Open();
+        //     using (SqlConnection con = new SqlConnection(_connectionStrings))
+        //     {
+        //         con.Open();
 
-                SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@StoreId", c_storeId);
+        //         SqlCommand command = new SqlCommand(sqlQuery, con);
+        //         command.Parameters.AddWithValue("@StoreId", c_storeId);
 
-                SqlDataReader reader = command.ExecuteReader();
+        //         SqlDataReader reader = command.ExecuteReader();
                 
-                while (reader.Read())
-                {
-                    listOfStores.Add(new StoreFront(){
-                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
-                        OrderId = reader.GetInt32(0),
-                        StoreId = reader.GetInt32(1),
-                        Total = reader.GetInt32(2)
-                    });
-                }
-            }
-            return listOfStores;
-        }
+        //         while (reader.Read())
+        //         {
+        //             listOfStores.Add(new StoreFront(){
+        //                 //Reader column is NOT based on table structure but based on what your select statement is displaying 
+        //                 OrderId = reader.GetInt32(0),
+        //                 StoreId = reader.GetInt32(1),
+        //                 Total = reader.GetInt32(2)
+        //             });
+        //         }
+        //     }
+        //     return listOfStores;
+        // }
 
         public List<Orders> GetOrdersByCustomerId(int c_customerId)
         {
             List<Orders> listOfOrders = new List<Orders>();
 
-            string sqlQuery = @"select c.CustomerId, o.OrderId from Orders o  
+            string sqlQuery = @"select c.CustomerId, o.OrderId, o.total from Orders o  
                                 inner join customer c on o.CustomerId  = c.CustomerId
                                 where o.CustomerId = @CustomerId";
 
@@ -160,7 +161,8 @@ namespace StoreAppDL
                     listOfOrders.Add(new Orders(){
                         //Reader column is NOT based on table structure but based on what your select statement is displaying 
                         OrderId = reader.GetInt32(1),
-                        CustomerId = reader.GetInt32(0)
+                        CustomerId = reader.GetInt32(0),
+                        _total = reader.GetInt32(2)
                     });
                 }
             }
@@ -310,7 +312,56 @@ namespace StoreAppDL
             }
        }
 
+        public List<ProductModel> GetProducts()
+        {
+            List<ProductModel> listOfProducts = new List<ProductModel>();
+            
+            string sqlQuery = @"select * from Product";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                
+                //Create command object 
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfProducts.Add(new ProductModel(){
+                        //Reader column is NOT based on table structure but based on what your select statement is displaying 
+                        
+                        productID = reader.GetInt32(0),
+                        pName = reader.GetString(1)
+                    });
+            }
+        }
+        return listOfProducts;
         
     }
+
+        public ProductModel AddProduct(ProductModel p_name)
+        {
+            string sqlQuery = @"INSERT INTO Product (Name, Price, Description) VALUES(@pName, @Price, @Description)";
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery,con);
+
+                command.Parameters.AddWithValue("@pName", p_name.pName);
+                command.Parameters.AddWithValue("@Price", p_name.Price);
+                command.Parameters.AddWithValue("@Description", p_name.Description);
+
+                command.ExecuteNonQuery();
+
+            }
+            return p_name;
+        }
+    }
 }
+
         

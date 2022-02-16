@@ -189,3 +189,251 @@ PhoneNumber: 777-777-7777
 2022-02-15 16:36:10.076 -05:00 [INF] Displaying View Inventory Menu to user
 2022-02-15 16:36:15.545 -05:00 [INF] Displaying MainMenu to user
 2022-02-15 16:36:24.496 -05:00 [INF] Exiting application
+2022-02-15 19:02:33.047 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 19:02:41.811 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:02:52.419 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 19:02:58.003 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:02:59.827 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 19:03:06.098 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:03:46.634 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:03:52.988 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 19:04:03.241 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:04:06.905 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 19:04:20.562 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:04:34.776 -05:00 [INF] Exiting application
+2022-02-15 19:08:40.339 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:09:07.459 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:09:13.196 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 19:09:22.519 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:10:17.533 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:10:20.684 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:10:21.876 -05:00 [INF] Exiting application
+2022-02-15 19:10:30.255 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:10:34.860 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:10:36.588 -05:00 [INF] Exiting application
+2022-02-15 19:11:20.653 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:11:25.435 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 19:11:27.250 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:11:30.179 -05:00 [INF] Exiting application
+2022-02-15 19:12:02.156 -05:00 [INF] Displaying Get Customer Order Menu to user
+2022-02-15 19:12:05.633 -05:00 [INF] Successful at getting Customer Order
+2022-02-15 19:12:14.169 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:12:20.352 -05:00 [INF] Displaying View Order History Menu to user
+2022-02-15 19:12:30.600 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:12:34.490 -05:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 19:12:48.073 -05:00 [INF] Successfully Replenished Store
+2022-02-15 19:12:50.055 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:13:22.977 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 19:13:30.134 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 19:13:48.670 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 19:13:56.741 -05:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 19:13:59.494 -05:00 [INF] Adding customer 
+Id: 0
+Name: Demo One
+Address: Demo Address
+PhoneNumber: 789-567-3321
+
+2022-02-15 19:13:59.546 -05:00 [INF] Successful at adding customer!
+2022-02-15 19:13:59.546 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:14:02.565 -05:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 19:14:07.645 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:14:17.484 -05:00 [INF] Displaying View Inventory Menu to user
+2022-02-15 19:14:27.516 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 19:14:34.020 -05:00 [INF] Exiting application
+2022-02-15 22:33:30.931 -05:00 [INF] User entered an ivalid key
+2022-02-15 22:34:52.542 -05:00 [INF] Exiting application
+2022-02-15 22:34:59.091 -05:00 [INF] Displaying Place Order Menu
+2022-02-15 22:35:01.958 -05:00 [INF] User is placing order
+2022-02-15 22:36:31.430 -05:00 [INF] Displaying Place Order Menu
+2022-02-15 22:36:33.091 -05:00 [INF] User is placing order
+2022-02-15 22:36:48.986 -05:00 [INF] User entered an ivalid key
+2022-02-15 22:36:53.106 -05:00 [INF] User is placing order
+2022-02-15 22:36:57.042 -05:00 [INF] User entered an ivalid key
+2022-02-15 22:39:55.527 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 22:39:57.916 -05:00 [INF] User is placing order
+2022-02-15 22:40:02.188 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:40:02.219 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:40:33.519 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 22:40:36.627 -05:00 [INF] User is placing order
+2022-02-15 22:40:38.699 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:40:38.729 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:47:46.304 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 22:47:50.581 -05:00 [INF] User is placing order
+2022-02-15 22:47:53.253 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:47:53.285 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:47:57.467 -05:00 [INF] Displaying ShopMenu to user
+2022-02-15 22:51:47.232 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 22:51:52.117 -05:00 [INF] User is placing order
+2022-02-15 22:51:53.933 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:51:53.967 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:51:58.741 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:51:58.771 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:52:00.109 -05:00 [INF] Displaying ShopMenu to user
+2022-02-15 22:52:00.196 -05:00 [INF] Products Have Been Shown
+2022-02-15 22:52:06.316 -05:00 [INF] Order Started
+2022-02-15 22:56:03.952 -05:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 22:56:20.401 -05:00 [INF] Successfully Replenished Store
+2022-02-15 22:56:23.924 -05:00 [INF] Displaying MainMenu to user
+2022-02-15 22:56:25.724 -05:00 [INF] Exiting application
+2022-02-15 22:58:03.979 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 22:58:05.961 -05:00 [INF] User is placing order
+2022-02-15 22:58:08.600 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 22:58:08.653 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 22:58:11.072 -05:00 [INF] Displaying ShopMenu to user
+2022-02-15 22:58:11.159 -05:00 [INF] Products Have Been Shown
+2022-02-15 22:58:15.912 -05:00 [INF] Order Started
+2022-02-15 23:00:04.520 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 23:00:06.477 -05:00 [INF] User is placing order
+2022-02-15 23:00:10.453 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 23:00:10.484 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 23:00:12.695 -05:00 [INF] Displaying ShopMenu to user
+2022-02-15 23:00:12.787 -05:00 [INF] Products Have Been Shown
+2022-02-15 23:00:15.764 -05:00 [INF] Order Started
+2022-02-15 23:05:44.131 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-15 23:05:46.803 -05:00 [INF] User is placing order
+2022-02-15 23:05:54.990 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 23:05:55.023 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 23:06:06.804 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-15 23:06:06.834 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-15 23:06:09.897 -05:00 [INF] Displaying ShopMenu to user
+2022-02-15 23:06:09.987 -05:00 [INF] Products Have Been Shown
+2022-02-15 23:06:21.053 -05:00 [INF] Order Started
+2022-02-16 00:26:52.904 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 00:26:56.332 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:26:57.908 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:26:57.909 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:27:03.844 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:27:03.844 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:27:10.299 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:27:10.300 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:27:19.523 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:27:19.524 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:27:21.035 -05:00 [INF] 
+2022-02-16 00:27:21.036 -05:00 [INF] Adding Product 
+ID: 5
+ Name: Cards
+2022-02-16 00:27:21.104 -05:00 [WRN] Failed to add customer
+2022-02-16 00:27:58.578 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:27:59.234 -05:00 [INF] Exiting application
+2022-02-16 00:31:28.758 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:31:28.798 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:31:34.091 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:31:34.092 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:31:38.787 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:31:40.466 -05:00 [INF] Exiting application
+2022-02-16 00:33:10.196 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:33:10.212 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:33:16.391 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:33:16.392 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:33:19.271 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:33:19.272 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:33:25.416 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:33:25.417 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:33:30.095 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:33:30.096 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:33:31.111 -05:00 [INF] 
+2022-02-16 00:33:31.111 -05:00 [INF] Adding Product 
+ID: 6
+ Name: Cards
+2022-02-16 00:33:31.693 -05:00 [WRN] Failed to add customer
+2022-02-16 00:33:59.142 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:34:00.583 -05:00 [INF] Exiting application
+2022-02-16 00:35:31.752 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:35:31.792 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:35:43.469 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:35:43.470 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:35:48.315 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:35:48.315 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:35:52.834 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:35:52.835 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:35:55.962 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:35:55.963 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:35:57.379 -05:00 [INF] 
+2022-02-16 00:35:57.379 -05:00 [INF] Adding Product 
+ID: 6
+ Name: Cards
+2022-02-16 00:35:57.825 -05:00 [WRN] Failed to add customer
+2022-02-16 00:36:22.753 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:36:24.681 -05:00 [INF] Exiting application
+2022-02-16 00:37:25.659 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:37:25.675 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:37:36.145 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:37:36.146 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:37:39.231 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:37:39.232 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:37:42.999 -05:00 [INF] Displaying add product menu to user
+2022-02-16 00:37:43.000 -05:00 [INF] Displaying Add Product Menu
+2022-02-16 00:37:43.767 -05:00 [INF] 
+2022-02-16 00:37:43.767 -05:00 [INF] Adding Product 
+ID: 0
+ Name: Cards
+2022-02-16 00:37:44.272 -05:00 [INF] Successful at adding product!
+2022-02-16 00:37:44.272 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 00:39:40.459 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 00:39:43.532 -05:00 [INF] User is placing order
+2022-02-16 00:39:49.698 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 00:39:49.730 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 00:39:54.072 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 00:39:54.136 -05:00 [INF] Products Have Been Shown
+2022-02-16 00:39:55.562 -05:00 [INF] Order Started
+2022-02-16 00:40:49.228 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 00:40:51.057 -05:00 [INF] User is placing order
+2022-02-16 00:40:53.384 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 00:40:53.416 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 00:40:55.652 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 00:40:55.743 -05:00 [INF] Products Have Been Shown
+2022-02-16 00:40:58.400 -05:00 [INF] Order Started
+2022-02-16 00:59:08.008 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 00:59:12.109 -05:00 [INF] User is placing order
+2022-02-16 00:59:14.845 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 00:59:14.876 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 00:59:17.238 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:05:55.523 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 01:05:58.560 -05:00 [INF] User is placing order
+2022-02-16 01:06:00.455 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:06:00.491 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:06:03.071 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:07:38.939 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 01:07:40.748 -05:00 [INF] User is placing order
+2022-02-16 01:07:44.124 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:07:44.160 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:07:46.563 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:07:46.684 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:07:50.660 -05:00 [INF] Order Started
+2022-02-16 01:08:06.492 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:08:06.582 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:08:08.580 -05:00 [INF] Order has been submitted
+2022-02-16 01:08:08.580 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 01:09:20.569 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 01:09:21.785 -05:00 [INF] User is placing order
+2022-02-16 01:09:27.065 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:09:27.095 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:09:35.737 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:09:35.770 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:09:38.613 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:09:38.706 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:09:41.417 -05:00 [INF] Order Started
+2022-02-16 01:10:43.323 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 01:10:46.542 -05:00 [INF] User is placing order
+2022-02-16 01:10:52.414 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:10:52.446 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:10:54.127 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:10:54.252 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:10:55.654 -05:00 [INF] Order Started
+2022-02-16 01:11:00.662 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:11:00.754 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:11:01.846 -05:00 [INF] Order has been submitted
+2022-02-16 01:11:01.846 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 01:11:03.750 -05:00 [INF] Exiting application
+2022-02-16 01:12:37.407 -05:00 [INF] Displaying Place Order Menu to user
+2022-02-16 01:12:40.387 -05:00 [INF] User is placing order
+2022-02-16 01:12:42.491 -05:00 [INF] Displaying ShopUI Menu to user
+2022-02-16 01:12:42.525 -05:00 [INF] User is being displayed ShopUI Menu
+2022-02-16 01:12:45.408 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:12:45.534 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:12:46.866 -05:00 [INF] Order Started
+2022-02-16 01:12:54.122 -05:00 [INF] Displaying ShopMenu to user
+2022-02-16 01:12:54.214 -05:00 [INF] Products Have Been Shown
+2022-02-16 01:12:55.274 -05:00 [INF] Order has been submitted
+2022-02-16 01:12:57.410 -05:00 [INF] Displaying MainMenu to user
+2022-02-16 01:13:07.002 -05:00 [INF] Exiting application

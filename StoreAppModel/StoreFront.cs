@@ -1,5 +1,5 @@
 using OrderModel;
-using ProductModel;
+using MemorabiliaModel;
 
 namespace StoreFrontModel
 {
@@ -20,8 +20,8 @@ namespace StoreFrontModel
         //     get {return _listOfOrders; }
         // }
 
-        private List<Products> _products;
-        public List<Products> Products
+        private List<Memorabilia> _products;
+        public List<Memorabilia> Products
         {
             get {return _products; }
             set
